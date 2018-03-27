@@ -1,0 +1,17 @@
+FROM php:7-apache
+MAINTAINER Ryan Stanley <ryan.stanley@alum.cs.umass.edu>
+
+# install dependencies
+RUN apt-get update && apt-get install -y \
+    mercurial \
+    openjdk-7-jre \
+    python-pip && \
+    rm -rf /var/lib/apt/lists/* && \
+    pip install cheetah
+
+COPY . /src
+WORKDIR /src
+
+# build and deploy
+RUN ./dockerdeploy.sh /var/www/html/
+WORKDIR /var/www/html/
