@@ -19,6 +19,7 @@ function fetchModel() {
             url:"http://localhost:12345/json.php", 
             data:parameters
         }).done(function(model) {
+            console.log(parameters)
             if(requestID == model.responseID) {
                 requestID++; 
                 data = model; 
