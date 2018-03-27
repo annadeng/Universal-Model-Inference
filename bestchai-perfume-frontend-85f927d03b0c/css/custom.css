@@ -1,0 +1,113 @@
+/* Style the repository revision/version container */
+#version-container{
+    float:right;
+    left:80%;
+    top:0px;
+    height:30px;
+    width:19%;
+    text-align:right;
+    color:grey;
+    font-size: 10px;
+    font-family: monospace;
+}
+
+/*Input*/
+#examples-button {
+  position: relative;
+  top: 20px;
+  float: right;
+}
+
+#examples {
+  position: fixed;
+}
+
+.ui-resizable-handle {
+  bottom: 25px  !important;
+  right: 3px    !important;
+}
+
+#argument-tip {
+  position: relative;
+  float: right;
+  top: 1px;
+}
+
+#argument-help {
+  position: relative;
+  float: right;
+}
+
+/*Model and legend*/
+.node circle, .node ellipse {
+    stroke: #333;
+    stroke-width: 1.5px;
+    fill: #eee;
+}
+
+.edgeLabel rect {
+    fill: #fff;
+}
+
+.edgePath marker {
+    fill: #333;
+}
+
+.edgePath path.path {
+    stroke: #333;
+    stroke-width: 6px;
+    fill: none;
+}
+
+#legend {
+    position:absolute;
+    z-index:1;
+}
+
+#modelCanvas {
+    position:absolute;
+    z-index:2;
+}
+
+/*TODO: honestly not sure what this goes to*/
+.myholder{
+  width: 600;
+  height: 600;
+}
+.table {
+  font-size: 13;
+
+}
+
+/* Invariants */
+#invars {
+  margin: 0 auto;
+  max-width: 500px;
+  padding-left:40px;
+}
+.table {
+  font-size: 13;
+}
+.invarrow {
+  font-family: DejaVu Sans;
+  font-size: 1.5em;
+}
+
+/* Kwicks multi-pane view */
+.kwicks {
+  width: 95%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.kwicks > li {
+  height: 90%;
+  bottom: 5px;
+  box-shadow: 0 0 1px;
+  /* Overridden by kwicks but good for when JavaScript is disabled */
+  width: 150px;
+  overflow: auto;
+}
+.kwicks > li.kwicks-expanded {
+  border-color: #777;
+}
