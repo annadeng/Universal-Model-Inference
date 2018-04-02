@@ -1,22 +1,30 @@
-INFO: Using random seed: 1522279092075 
-INFO: Parsing input files.. 
-INFO: Successfully parsed 1 traces, containing a total of 26 events from [/Users/annadeng/Documents/Courses/Grad_4/621/Project/Universal-Model-Inference/bestchai-perfume-frontend-85f927d03b0c/./tmp/log.txt] 
-INFO: Parsing took 8ms 
-INFO: Generating inter-event temporal relation... 
-INFO: Generating temporal relation took 5ms 
-INFO: Mining invariants [synoptic.invariants.miners.ChainWalkingTOInvMiner].. 
-INFO: Mining took 6ms 
-INFO: Mining performance-constrained invariants... 
-INFO: Constrained mining took 40ms 
-INFO: Mined 68 invariants 
-INFO: Creating initial partition graph. 
-INFO: Creating partition graph took 3ms 
-INFO: Refining (Splitting)... 
-INFO: Splitting took 207ms 
-INFO: Coarsening (Merging).. 
-INFO: Merging took 82ms 
-INFO: Exporting final graph [19 nodes].. 
-INFO: Not outputting model due to flag --noModelOutput 
-INFO: Exporting took 0ms 
-INFO: Exporting final graph as a JSON object... 
-INFO: Exporting JSON object took 13ms 
+unknown option name '-j' in arg '-j'
+Usage: synoptic [options] <logfiles-to-analyze>
+
+General Options:
+  -h --help=<boolean>                   - Print short usage message [default false]
+  -H --allHelp=<boolean>                - Print extended usage message (includes debugging options) [default false]
+  -V --version=<boolean>                - Print program version [default false]
+
+Execution Options:
+  -q --logLvlQuiet=<boolean>            - Be quiet, do not print much information [default false]
+  -v --logLvlVerbose=<boolean>          - Print extra detailed information [default false]
+  -f --useFSMChecker=<boolean>          - Use FSM checker instead of the default LTL checker [default false]
+
+Parser Options:
+  -s --separator=<string>               - Partitions separator reg-exp: log lines below and above the matching line are placed into different partitions
+  -r --regExps=<string> [+]             - Parser reg-exp: extracts event type and event time from a log line
+  -m --partitionRegExp=<string>         - Partitions mapping reg-exp: maps a log line to a partition [default \k<FILE>]
+  -i --ignoreNonMatchingLines=<boolean> - Ignore lines that do not match any of the passed regular expressions [default false]
+  --recoverFromParseErrors=<boolean>    - Ignore parser warnings and attempt to recover from parse errors if possible [default false]
+  --debugParse=<boolean>                - Debug the parser by printing field values extracted from the log and then terminate. [default false]
+
+Input Options:
+  -c --argsFilename=<string>            - Command line arguments input filename
+
+Output Options:
+  -o --outputPathPrefix=<string>        - Output path prefix for generating Graphviz dot files graphics
+  -d --dotExecutablePath=<string>       - Path to the Graphviz dot command executable to use
+  --outputEdgeLabels=<boolean>          - Output edge labels on graphs to indicate transition probabilities [default true]
+
+[+] marked option can be specified multiple times
