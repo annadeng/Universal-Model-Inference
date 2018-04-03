@@ -1,6 +1,7 @@
 #!/bin/sh
 
-# Runs Synoptic from the compiled JAR file, passing all command
+# Runs Perfume from the compiled JAR file, passing all command
 # line argument directly to main().
 
-java -ea -jar ./lib/synoptic.jar $*
+java -jar ./syn-bin/synoptic.jar $*
+
