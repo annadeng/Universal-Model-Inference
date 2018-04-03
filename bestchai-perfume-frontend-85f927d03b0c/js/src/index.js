@@ -16,7 +16,7 @@ function fetchModel() {
         var parameters =  { logfile: $("#logtext").val(), args: $("#argsfield").val(), requestID: requestID };
         $.ajax({
             type:"POST", 
-            url:"http://localhost:8080/jsonsynoptic.php", 
+            url:"http://localhost:8080/jsonperfume.php", 
             data:parameters
         }).done(function(model) {
             console.log(parameters)

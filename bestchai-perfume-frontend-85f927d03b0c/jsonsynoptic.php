@@ -19,7 +19,7 @@ fwrite($jsonfh, "\n");
 fwrite($jsonfh, "-o ./tmp/json\n");
 fwrite($jsonfh, "-j\n");
 fclose($jsonfh);
-$output = shell_exec(' ./synoptic.sh -c ./tmp/jsonargs.txt ' . "./tmp/log.txt 2>&1");
+$output = shell_exec(' ./synoptic.sh --noModelOutput -c ./tmp/jsonargs.txt ' . "./tmp/log.txt 2>&1");
 $json = file_get_contents('./tmp/json.json');
 
 $outputfh = fopen("./tmp/jsonout.txt", 'w') or die("can't open file");
