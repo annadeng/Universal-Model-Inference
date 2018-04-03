@@ -4,3 +4,4 @@
 # line argument directly to main().
 
 java -jar ./syn-bin/synoptic.jar $*
+
