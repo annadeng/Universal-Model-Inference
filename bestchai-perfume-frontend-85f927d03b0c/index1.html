@@ -46,33 +46,30 @@
 <div id="form" style="width: 100%">
 	<fieldset><div id="innerform" style="margin: 0 auto; max-width:500px;">
 
-		<button id="algorithms-button" class="btn btn-primary dropdown-toggle" type="button" href="#"  data-jq-dropdown="#algorithms">Algorithms
-		<span class="caret"></span></button>
-
 		<button id="examples-button" class="btn btn-primary dropdown-toggle" type="button" href="#"  data-jq-dropdown="#examples">Examples
 		<span class="caret"></span></button>
 
-		<div id="algorithms" class="jq-dropdown jq-dropdown-tip jq-dropdown-anchor-right">
-		  <ul class="jq-dropdown-menu">
-		    <li><a onclick="clearData(); writeBrowserModel();">Browser caching</a></li>
-		    <li><a onclick="clearData(); writeConnectionModel();">Connection tester</a></li>
-		    <li><a onclick="clearData(); writeRadiusModel();">RADIUS authentication</a></li>
-		    <li><a onclick="clearData(); writedjQModel();">djQ music player</a></li>
-		    <li><a onclick="clearData(); writeShoppingCartModel();">Shopping cart</a></li>
-		  </ul>
-		</div>
-
 	    <div id="examples" class="jq-dropdown jq-dropdown-tip jq-dropdown-anchor-right">
 		  <ul class="jq-dropdown-menu">
-		    <li><a onclick="clearData(); writeBrowserModel();">Browser caching</a></li>
-		    <li><a onclick="clearData(); writeConnectionModel();">Connection tester</a></li>
-		    <li><a onclick="clearData(); writeRadiusModel();">RADIUS authentication</a></li>
-		    <li><a onclick="clearData(); writedjQModel();">djQ music player</a></li>
-		    <li><a onclick="clearData(); writeShoppingCartModel();">Shopping cart</a></li>
+		    <li><a onclick="clearData(); writeBrowserModel('browser');">Browser caching</a></li>
+		    <li><a onclick="clearData(); writeConnectionModel('connnection');">Connection tester</a></li>
+		    <li><a onclick="clearData(); writeRadiusModel('radius');">RADIUS authentication</a></li>
+		    <li><a onclick="clearData(); writedjQModel('djq');">djQ music player</a></li>
+		    <li><a onclick="clearData(); writeShoppingCartModel('shopping');">Shopping cart</a></li>
 		  </ul>
 		</div>
 
 		<div style="clear:both"></div>
+
+		<button id="algorithm-button" class="btn btn-primary dropdown-toggle" type="button" href="#"  data-jq-dropdown="#algorithms">Algorithms
+		<span class="caret"></span></button>
+
+	    <div id="algorithms" class="jq-dropdown jq-dropdown-tip jq-dropdown-anchor-right">
+		  <ul class="jq-dropdown-menu">
+		    <li><a onclick="writePerfumeArg();">Perfume</a></li>
+		    <li><a onclick="writeSynopticAug();">Synoptic</a></li>
+		  </ul>
+		</div>
 
         <form>
 			<div class="control-group" style="">
