@@ -10,7 +10,32 @@ function openParsingDialog() {
     $("#parsing-progressbar").progressbar({ value: false });
 }
 
-function fetchModel() {
+function fetchSynopticModel() {
+    if(formIsFilledOut()) {
+        openParsingDialog();
+        var parameters =  { logfile: $("#logtext").val(), args: $("#argsfield").val(), requestID: requestID };
+        $.ajax({
+            type:"POST", 
+            url:"http://localhost:8080/jsonperfume.php", 
+            data:parameters
+        }).done(function(model) {
+            console.log(parameters)
+            if(requestID == model.responseID) {
+                requestID++; 
+                data = model; 
+                revealModel();
+            }
+        }).error(function(model) {
+            alert("An error occured. Please try again later."); 
+            alert(model.responseText);});
+        return parameters;
+    }
+    else {
+        alert("You must enter both a log and regular expressions before Perfume can infer a model.");
+    }
+};
+
+function fetchPerfumeModel() {
     if(formIsFilledOut()) {
         openParsingDialog();
         var parameters =  { logfile: $("#logtext").val(), args: $("#argsfield").val(), requestID: requestID };
