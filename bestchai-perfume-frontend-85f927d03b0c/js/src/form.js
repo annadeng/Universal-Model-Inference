@@ -17,13 +17,28 @@ var shoppingcartargs = "-r (?<ip>) .*(?<TIME>0).* \"GET HTTP/1.1 /(?<TYPE>.+).ph
 var logstring;
 var argstring;
 
-function writeBrowserModel() {
+var modelName;
+
+function writeBrowserModel(name) {
+    this.modelName = name;
     logstring = browserlog;
-    argstring = browserargs;
+    //argstring = browserargs;
     write();
 }
 
+function writePerfumeAug() {
+    if(modelName === "browser"){
+        argstring = browserargs;
+    }
+    else{
+        argstring ="";
+    }
+    //
+    //write();
+}
+
 function writeConnectionModel() {
+    modelName = name;
     logstring = connectionlog;
     argstring = connectionargs;
     write();
@@ -49,7 +64,7 @@ function writeShoppingCartModel() {
 
 function write() {
     $("#logtext").val(logstring);
-    $("#argsfield").val(argstring);
+    //$("#argsfield").val(argstring);
 }
 
 // given an array of line numbers, returns the corresponding array of strings from the input logs

@@ -87,6 +87,7 @@ function clearForm()  {
     $("#argsfield").val('');
 }
 
+
 function clearData() {
     clearForm();
     clearDataExceptForm();
