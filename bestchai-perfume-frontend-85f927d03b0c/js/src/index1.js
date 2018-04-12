@@ -159,22 +159,22 @@ function fetchModel_Synoptic() {
     }
 };
 
-function revealModel_both(data1, data2) {
-    $("#parsing-dialog").dialog("close");
-    unhighlight(); // highlightInput.js
-    clearModel(); // fsa2.js - added to fix dagre-d3 failure, issue 104
-    drawModel(data1); // fsa2.js
-    drawModelLegend();
-    drawInvariants(data1); // invariants.js
-    handleExpand(-1);
+// function revealModel_both(data1, data2) {
+//     $("#parsing-dialog").dialog("close");
+//     unhighlight(); // highlightInput.js
+//     clearModel(); // fsa2.js - added to fix dagre-d3 failure, issue 104
+//     drawModel(data1); // fsa2.js
+//     drawModelLegend();
+//     drawInvariants(data1); // invariants.js
+//     handleExpand(-1);
 
-    unhighlight(); // highlightInput.js
-    //clearModel(); // fsa2.js - added to fix dagre-d3 failure, issue 104
-    drawModel(data2); // fsa2.js
-    drawModelLegend();
-    drawInvariants(data2); // invariants.js
-    handleExpand(-1);
-}
+//     unhighlight(); // highlightInput.js
+//     //clearModel(); // fsa2.js - added to fix dagre-d3 failure, issue 104
+//     drawModel(data2); // fsa2.js
+//     drawModelLegend();
+//     drawInvariants(data2); // invariants.js
+//     handleExpand(-1);
+// }
 
 
 function revealModel() {
