@@ -1,4 +1,4 @@
--r (?<ip>.+), (?<TYPE>.+), (?<DTIME>.+)
+-r (?<ip>.+), (?<TYPE>.+), .+
 -m \\k<ip>
 -o ./tmp/json
 -j

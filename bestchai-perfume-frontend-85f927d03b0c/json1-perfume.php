@@ -19,6 +19,12 @@ fwrite($jsonfh, "\n");
 fwrite($jsonfh, "-o /tmp/json\n");
 fwrite($jsonfh, "-j\n");
 fclose($jsonfh);
+
+//$outputpp = fopen('/tmp/partPrefix.dot', 'w') or die("can't open file");
+//fwrite($outputpp, "");
+//fclose($outputpp);
+
+//$output = shell_exec(' ./perfume.sh --outputPathPrefix ' . '/tmp/pathPrefix.dot' . ' -c /tmp/jsonargs.txt ' . "/tmp/log.txt 2>&1");
 $output = shell_exec(' ./perfume.sh --noModelOutput -c /tmp/jsonargs.txt ' . "/tmp/log.txt 2>&1");
 $json = file_get_contents('/tmp/json.json');
 

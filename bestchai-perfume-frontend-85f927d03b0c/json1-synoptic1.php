@@ -3,12 +3,12 @@
 function main(){
 
 // Delete old json object to avoid it being returned
-$outputfh = fopen('/tmp/json.json', 'w') or die("can't open file");
+$outputfh = fopen('/tmp/json_synoptic.json', 'w') or die("can't open file");
 fwrite($outputfh, "");
 $a = $_POST['args'];
 $reqID = $_POST['requestID'];
-$jsonFile = "/tmp/jsonargs.txt";
-$logfile = "/tmp/log.txt";
+$jsonFile = "/tmp/jsonargs_synoptic.txt";
+$logfile = "/tmp/log_synoptic.txt";
 $logfh =  fopen($logfile, 'w') or die("can't open file");
 fwrite($logfh, $_POST["logfile"]);
 fclose($logfh);
@@ -16,13 +16,13 @@ fclose($logfh);
 $jsonfh = fopen($jsonFile, 'w') or die("can't open file");
 fwrite($jsonfh, $a);
 fwrite($jsonfh, "\n");
-fwrite($jsonfh, "-o /tmp/json\n");
+fwrite($jsonfh, "-o /tmp/json_synoptic\n");
 fwrite($jsonfh, "-j\n");
 fclose($jsonfh);
 $output = shell_exec(' ./synoptic.sh --noModelOutput -c /tmp/jsonargs_synoptic.txt ' . "/tmp/log_synoptic.txt 2>&1");
-$json = file_get_contents('/tmp/json.json');
+$json = file_get_contents('/tmp/json_synoptic.json');
 
-$outputfh = fopen("/tmp/jsonout.txt", 'w') or die("can't open file");
+$outputfh = fopen("/tmp/jsonout_synoptic.txt", 'w') or die("can't open file");
 fwrite($outputfh, $output);
 
 // Check for SEVERE messages that indicate an error

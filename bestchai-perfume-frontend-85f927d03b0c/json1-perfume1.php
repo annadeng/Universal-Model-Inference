@@ -3,26 +3,26 @@
 function main(){
 
 // Delete old json object to avoid it being returned
-$outputfh = fopen('/tmp/json.json', 'w') or die("can't open file");
+$outputfh = fopen('/tmp/json_perfume.json', 'a') or die("can't open file");
 fwrite($outputfh, "");
 $a = $_POST['args'];
 $reqID = $_POST['requestID'];
-$jsonFile = "/tmp/jsonargs.txt";
-$logfile = "/tmp/log.txt";
+$jsonFile = "/tmp/jsonargs_perfume.txt";
+$logfile = "/tmp/log_perfume.txt";
 $logfh =  fopen($logfile, 'w') or die("can't open file");
 fwrite($logfh, $_POST["logfile"]);
 fclose($logfh);
 
-$jsonfh = fopen($jsonFile, 'w') or die("can't open file");
+$jsonfh = fopen($jsonFile, 'a') or die("can't open file");
 fwrite($jsonfh, $a);
 fwrite($jsonfh, "\n");
-fwrite($jsonfh, "-o /tmp/json\n");
+fwrite($jsonfh, "-o /tmp/json_perfume\n");
 fwrite($jsonfh, "-j\n");
 fclose($jsonfh);
-$output = shell_exec(' ./synoptic.sh --noModelOutput -c /tmp/jsonargs_synoptic.txt ' . "/tmp/log_synoptic.txt 2>&1");
+$output = shell_exec(' ./perfume.sh --noModelOutput -c /tmp/jsonargs_perfume.txt ' . "/tmp/log_perfume.txt 2>&1");
 $json = file_get_contents('/tmp/json.json');
 
-$outputfh = fopen("/tmp/jsonout.txt", 'w') or die("can't open file");
+$outputfh = fopen("/tmp/jsonout_perfume.txt", 'a') or die("can't open file");
 fwrite($outputfh, $output);
 
 // Check for SEVERE messages that indicate an error

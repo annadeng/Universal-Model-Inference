@@ -52,7 +52,7 @@
 	    <div id="examples" class="jq-dropdown jq-dropdown-tip jq-dropdown-anchor-right">
 		  <ul class="jq-dropdown-menu">
 		    <li><a onclick="clearData(); writeBrowserModel('browser');">Browser caching</a></li>
-		    <li><a onclick="clearData(); writeConnectionModel('connnection');">Connection tester</a></li>
+		    <li><a onclick="clearData(); writeConnectionModel('connection');">Connection tester</a></li>
 		    <li><a onclick="clearData(); writeRadiusModel('radius');">RADIUS authentication</a></li>
 		    <li><a onclick="clearData(); writedjQModel('djq');">djQ music player</a></li>
 		    <li><a onclick="clearData(); writeShoppingCartModel('shopping');">Shopping cart</a></li>
@@ -66,8 +66,9 @@
 
 	    <div id="algorithms" class="jq-dropdown jq-dropdown-tip jq-dropdown-anchor-right">
 		  <ul class="jq-dropdown-menu">
-		    <li><a onclick="writePerfumeArg();">Perfume</a></li>
-		    <li><a onclick="writeSynopticAug();">Synoptic</a></li>
+		    <li><a onclick="writePerfumeArg('perfume'); id='perfume';">Perfume</a></li>
+		    <li><a onclick="writeSynopticArg('synoptic'); id='synoptic';">Synoptic</a></li>
+		    <li><a onclick="writeSynopticArg('both');id='both';">both</a></li>
 		  </ul>
 		</div>
 
@@ -93,7 +94,7 @@
 		<!-- Button (Triple) -->
 		<div class="control-group">
 			<div class="controls">
-		    	<button id="fetchmodel" name="button1id" class="btn btn-primary" onclick="fetchModel(); ">Infer model</button>
+		    	<button id="fetchmodel" name="button1id" class="btn btn-primary" onclick="fetchModel(getAlg()); ">Infer model</button> 
 		    	<button id="clear-form" name="button2id" class="btn btn-clear" onclick="clearData()">Clear</button>
 		    	<button id="remove-highlighted-logs" name="button3id" class="btn btn-clear" onclick="removeHighlightedExecutionTraces()">Remove traces with highlighted lines</button>
 			</div>
@@ -109,6 +110,8 @@
                 <g transform="translate(20,20)"/>
         </svg>
 </div>
+
+
 
 
 				</li>
