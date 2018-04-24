@@ -1,46 +1,22 @@
-<<<<<<< HEAD
-INFO: Using random seed: 1522783948754 
-INFO: Parsing input files.. 
-INFO: Successfully parsed 6 traces, containing a total of 29 events from [/Users/annadeng/Documents/Courses/Grad_4/621/Project/Universal-Model-Inference/bestchai-perfume-frontend-85f927d03b0c/./tmp/log.txt] 
-INFO: Parsing took 8ms 
-=======
-INFO: Using random seed: 1524155492840 
+INFO: Using random seed: 1524598340448 
 INFO: Parsing input files.. 
 INFO: Successfully parsed 60 traces, containing a total of 628 events from [/Users/annadeng/Documents/Courses/Grad_4/621/Project/Universal-Model-Inference/bestchai-perfume-frontend-85f927d03b0c/./tmp/log.txt] 
-INFO: Parsing took 30ms 
->>>>>>> 50a86c1a6ed6bf6d441dacb899d31828f6de748d
+INFO: Parsing took 31ms 
 INFO: Generating inter-event temporal relation... 
-INFO: Generating temporal relation took 22ms 
+INFO: Generating temporal relation took 19ms 
 INFO: Mining invariants [synoptic.invariants.miners.ChainWalkingTOInvMiner].. 
-<<<<<<< HEAD
-INFO: Mining took 6ms 
+INFO: Mining took 24ms 
 INFO: Mining performance-constrained invariants... 
-INFO: Constrained mining took 17ms 
-INFO: Mined 47 invariants 
-=======
-INFO: Mining took 27ms 
-INFO: Mined 12 invariants 
-INFO: Retained 8 invariants after removing IntrBy  invariants 
->>>>>>> 50a86c1a6ed6bf6d441dacb899d31828f6de748d
+INFO: Constrained mining took 55ms 
+INFO: Mined 22 invariants 
 INFO: Creating initial partition graph. 
-INFO: Creating partition graph took 2ms 
+INFO: Creating partition graph took 4ms 
 INFO: Refining (Splitting)... 
-<<<<<<< HEAD
-INFO: Splitting took 53ms 
+INFO: Splitting took 297ms 
 INFO: Coarsening (Merging).. 
-INFO: Merging took 37ms 
-INFO: Exporting final graph [10 nodes].. 
+INFO: Merging took 533ms 
+INFO: Exporting final graph [21 nodes].. 
 INFO: Not outputting model due to flag --noModelOutput 
 INFO: Exporting took 0ms 
 INFO: Exporting final graph as a JSON object... 
-INFO: Exporting JSON object took 15ms 
-=======
-INFO: Splitting took 13ms 
-INFO: Coarsening (Merging).. 
-INFO: Merging took 1ms 
-INFO: Exporting final graph [6 nodes].. 
-INFO: Not outputting model due to flag --noModelOutput 
-INFO: Exporting took 0ms 
-INFO: Exporting final graph as a JSON object... 
-INFO: Exporting JSON object took 22ms 
->>>>>>> 50a86c1a6ed6bf6d441dacb899d31828f6de748d
+INFO: Exporting JSON object took 21ms 
