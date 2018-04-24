@@ -1,52 +1,184 @@
-SMTPProtocol772111086 /// org.columba.ristretto.smtp.SMTPProtocol.SMTPProtocol(java.lang.String, int):::EXIT134
-SMTPProtocol1377614405 /// org.columba.ristretto.smtp.SMTPProtocol.SMTPProtocol(java.lang.String, int):::EXIT134
-SMTPProtocol164230583 /// org.columba.ristretto.smtp.SMTPProtocol.SMTPProtocol(java.lang.String, int):::EXIT134
-SMTPProtocol164230583 /// org.columba.ristretto.smtp.SMTPProtocol.getState():::EXIT733
-SMTPProtocol1008646240 /// org.columba.ristretto.smtp.SMTPProtocol.SMTPProtocol(java.lang.String, int):::EXIT134
-SMTPProtocol1008646240 /// org.columba.ristretto.smtp.SMTPProtocol.getState():::EXIT733
-SMTPProtocol1557520988 /// org.columba.ristretto.smtp.SMTPProtocol.SMTPProtocol(java.lang.String, int):::EXIT134
-SMTPProtocol1557520988 /// org.columba.ristretto.smtp.SMTPProtocol.getState():::EXIT733
-SMTPProtocol135868227 /// org.columba.ristretto.smtp.SMTPProtocol.SMTPProtocol(java.lang.String, int):::EXIT134
-SMTPProtocol135868227 /// org.columba.ristretto.smtp.SMTPProtocol.getState():::EXIT733
-SMTPProtocol135868227 /// org.columba.ristretto.smtp.SMTPProtocol.openPort():::EXIT177
-SMTPProtocol135868227 /// org.columba.ristretto.smtp.SMTPProtocol.ehlo(java.net.InetAddress):::EXIT298
-SMTPProtocol135868227 /// org.columba.ristretto.smtp.SMTPProtocol.startTLS():::EXIT232
-SMTPProtocol135868227 /// org.columba.ristretto.smtp.SMTPProtocol.getState():::EXIT733
-SMTPProtocol2046182713 /// org.columba.ristretto.smtp.SMTPProtocol.SMTPProtocol(java.lang.String, int):::EXIT134
-SMTPProtocol2046182713 /// org.columba.ristretto.smtp.SMTPProtocol.getState():::EXIT733
-SMTPProtocol2046182713 /// org.columba.ristretto.smtp.SMTPProtocol.openPort():::EXIT186
-SMTPProtocol634779961 /// org.columba.ristretto.smtp.SMTPProtocol.SMTPProtocol(java.lang.String, int):::EXIT134
-SMTPProtocol634779961 /// org.columba.ristretto.smtp.SMTPProtocol.getState():::EXIT733
-SMTPProtocol634779961 /// org.columba.ristretto.smtp.SMTPProtocol.openPort():::EXIT177
-SMTPProtocol634779961 /// org.columba.ristretto.smtp.SMTPProtocol.ehlo(java.net.InetAddress):::EXIT298
-SMTPProtocol634779961 /// org.columba.ristretto.smtp.SMTPProtocol.mail(org.columba.ristretto.message.Address):::EXIT415
-SMTPProtocol634779961 /// org.columba.ristretto.smtp.SMTPProtocol.rcpt(org.columba.ristretto.message.Address):::EXIT445
-SMTPProtocol634779961 /// org.columba.ristretto.smtp.SMTPProtocol.data(java.io.InputStream):::EXIT535
-SMTPProtocol634779961 /// org.columba.ristretto.smtp.SMTPProtocol.quit():::EXIT559
-SMTPProtocol1009633633 /// org.columba.ristretto.smtp.SMTPProtocol.SMTPProtocol(java.lang.String, int):::EXIT134
-SMTPProtocol1009633633 /// org.columba.ristretto.smtp.SMTPProtocol.getState():::EXIT733
-SMTPProtocol1009633633 /// org.columba.ristretto.smtp.SMTPProtocol.openPort():::EXIT186
-SMTPProtocol2118116222 /// org.columba.ristretto.smtp.SMTPProtocol.SMTPProtocol(java.lang.String, int):::EXIT134
-SMTPProtocol2118116222 /// org.columba.ristretto.smtp.SMTPProtocol.getState():::EXIT733
-SMTPProtocol2118116222 /// org.columba.ristretto.smtp.SMTPProtocol.openPort():::EXIT177
-SMTPProtocol2118116222 /// org.columba.ristretto.smtp.SMTPProtocol.ehlo(java.net.InetAddress):::EXIT298
-SMTPProtocol2118116222 /// org.columba.ristretto.smtp.SMTPProtocol.mail(org.columba.ristretto.message.Address):::EXIT415
-SMTPProtocol2118116222 /// org.columba.ristretto.smtp.SMTPProtocol.rcpt(org.columba.ristretto.message.Address):::EXIT445
-SMTPProtocol2118116222 /// org.columba.ristretto.smtp.SMTPProtocol.data(java.io.InputStream):::EXIT535
-SMTPProtocol2118116222 /// org.columba.ristretto.smtp.SMTPProtocol.quit():::EXIT559
-SMTPProtocol148260869 /// org.columba.ristretto.smtp.SMTPProtocol.SMTPProtocol(java.lang.String, int):::EXIT134
-SMTPProtocol148260869 /// org.columba.ristretto.smtp.SMTPProtocol.getState():::EXIT733
-SMTPProtocol148260869 /// org.columba.ristretto.smtp.SMTPProtocol.openPort():::EXIT177
-SMTPProtocol148260869 /// org.columba.ristretto.smtp.SMTPProtocol.ehlo(java.net.InetAddress):::EXIT298
-SMTPProtocol148260869 /// org.columba.ristretto.smtp.SMTPProtocol.mail(org.columba.ristretto.message.Address):::EXIT415
-SMTPProtocol148260869 /// org.columba.ristretto.smtp.SMTPProtocol.rcpt(org.columba.ristretto.message.Address):::EXIT445
-SMTPProtocol148260869 /// org.columba.ristretto.smtp.SMTPProtocol.data(java.io.InputStream):::EXIT535
-SMTPProtocol148260869 /// org.columba.ristretto.smtp.SMTPProtocol.quit():::EXIT559
-SMTPProtocol467165034 /// org.columba.ristretto.smtp.SMTPProtocol.SMTPProtocol(java.lang.String, int):::EXIT134
-SMTPProtocol467165034 /// org.columba.ristretto.smtp.SMTPProtocol.getState():::EXIT733
-SMTPProtocol467165034 /// org.columba.ristretto.smtp.SMTPProtocol.openPort():::EXIT186
-SMTPProtocol749595579 /// org.columba.ristretto.smtp.SMTPProtocol.SMTPProtocol(java.lang.String, int):::EXIT134
-SMTPProtocol749595579 /// org.columba.ristretto.smtp.SMTPProtocol.getState():::EXIT733
-SMTPProtocol749595579 /// org.columba.ristretto.smtp.SMTPProtocol.openPort():::EXIT177
-SMTPProtocol749595579 /// org.columba.ristretto.smtp.SMTPProtocol.ehlo(java.net.InetAddress):::EXIT298
-SMTPProtocol749595579 /// org.columba.ristretto.smtp.SMTPProtocol.getState():::EXIT733
+Signature1639439496 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature1639439496 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature1639439496 /// java.security.Signature.update(byte[]):::EXIT668
+Signature1639439496 /// java.security.Signature.verify(byte[]):::EXIT592;condition="return == true"
+Signature71097223 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature71097223 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature71097223 /// java.security.Signature.update(byte[]):::EXIT668
+Signature71097223 /// java.security.Signature.verify(byte[]):::EXIT592;condition="return == true"
+Signature1495386678 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature1495386678 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature1495386678 /// java.security.Signature.update(byte[]):::EXIT668
+Signature1495386678 /// java.security.Signature.verify(byte[]):::EXIT592;condition="return == true"
+Signature1519829580 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature1519829580 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature1519829580 /// java.security.Signature.update(byte[], int, int):::EXIT689
+Signature382612503 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature382612503 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature382612503 /// java.security.Signature.update(byte[], int, int):::EXIT689
+Signature382612503 /// java.security.Signature.verify(byte[]):::EXIT592;condition="return == true"
+Signature297427665 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature297427665 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature297427665 /// java.security.Signature.update(byte[]):::EXIT668
+Signature297427665 /// java.security.Signature.verify(byte[]):::EXIT592;condition="return == true"
+Signature649664567 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature649664567 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature649664567 /// java.security.Signature.update(byte[], int, int):::EXIT689
+Signature1861158583 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature1861158583 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature1861158583 /// java.security.Signature.update(byte[]):::EXIT668
+Signature1861158583 /// java.security.Signature.verify(byte[]):::EXIT592;condition="return == true"
+Signature1794697452 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature1794697452 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature1794697452 /// java.security.Signature.update(byte[], int, int):::EXIT689
+Signature1794697452 /// java.security.Signature.verify(byte[]):::EXIT592;condition="not(return == true)"
+Signature1717657348 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature1717657348 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature1717657348 /// java.security.Signature.update(byte[]):::EXIT668
+Signature1717657348 /// java.security.Signature.verify(byte[]):::EXIT592;condition="return == true"
+Signature468446729 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature468446729 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature468446729 /// java.security.Signature.update(byte[]):::EXIT668
+Signature468446729 /// java.security.Signature.verify(byte[]):::EXIT592;condition="return == true"
+Signature342057023 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature342057023 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature342057023 /// java.security.Signature.update(byte[]):::EXIT668
+Signature342057023 /// java.security.Signature.verify(byte[]):::EXIT592;condition="return == true"
+Signature1201077616 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature1201077616 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature1201077616 /// java.security.Signature.update(byte[]):::EXIT668
+Signature1201077616 /// java.security.Signature.verify(byte[]):::EXIT592;condition="return == true"
+Signature1862819481 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature1862819481 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature1862819481 /// java.security.Signature.update(byte[], int, int):::EXIT689
+Signature1585987150 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature1585987150 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature1585987150 /// java.security.Signature.update(byte[]):::EXIT668
+Signature1585987150 /// java.security.Signature.verify(byte[]):::EXIT592;condition="return == true"
+Signature1662199854 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature1662199854 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature1662199854 /// java.security.Signature.update(byte[], int, int):::EXIT689
+Signature638638638 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature638638638 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature638638638 /// java.security.Signature.update(byte[]):::EXIT668
+Signature638638638 /// java.security.Signature.verify(byte[]):::EXIT592;condition="return == true"
+Signature530544122 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature530544122 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature530544122 /// java.security.Signature.update(byte[], int, int):::EXIT689
+Signature530544122 /// java.security.Signature.verify(byte[]):::EXIT592;condition="return == true"
+Signature8509807 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature8509807 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature8509807 /// java.security.Signature.update(byte[]):::EXIT668
+Signature8509807 /// java.security.Signature.verify(byte[]):::EXIT592;condition="return == true"
+Signature1186517645 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature1186517645 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature1186517645 /// java.security.Signature.update(byte[], int, int):::EXIT689
+Signature516987131 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature516987131 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature516987131 /// java.security.Signature.update(byte[], int, int):::EXIT689
+Signature1717201354 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature1717201354 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature1717201354 /// java.security.Signature.update(byte[]):::EXIT668
+Signature1717201354 /// java.security.Signature.verify(byte[]):::EXIT592;condition="return == true"
+Signature2003997142 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature2003997142 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature2003997142 /// java.security.Signature.update(byte[], int, int):::EXIT689
+Signature2003997142 /// java.security.Signature.verify(byte[]):::EXIT592;condition="return == true"
+Signature319821040 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature319821040 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature319821040 /// java.security.Signature.update(byte[]):::EXIT668
+Signature319821040 /// java.security.Signature.verify(byte[]):::EXIT592;condition="return == true"
+Signature6755343 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature6755343 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature6755343 /// java.security.Signature.update(byte[]):::EXIT668
+Signature6755343 /// java.security.Signature.verify(byte[]):::EXIT592;condition="return == true"
+Signature945573676 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature945573676 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature945573676 /// java.security.Signature.update(byte[], int, int):::EXIT689
+Signature237565411 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature237565411 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature237565411 /// java.security.Signature.update(byte[]):::EXIT668
+Signature237565411 /// java.security.Signature.verify(byte[]):::EXIT592;condition="return == true"
+Signature1481636694 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature1481636694 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature1481636694 /// java.security.Signature.update(byte[], int, int):::EXIT689
+Signature1481636694 /// java.security.Signature.verify(byte[]):::EXIT592;condition="not(return == true)"
+Signature704142183 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature704142183 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature704142183 /// java.security.Signature.update(byte[]):::EXIT668
+Signature704142183 /// java.security.Signature.verify(byte[]):::EXIT592;condition="return == true"
+Signature683970297 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature683970297 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature683970297 /// java.security.Signature.update(byte[]):::EXIT668
+Signature683970297 /// java.security.Signature.verify(byte[]):::EXIT592;condition="return == true"
+Signature847962619 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature847962619 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature847962619 /// java.security.Signature.update(byte[]):::EXIT668
+Signature847962619 /// java.security.Signature.verify(byte[]):::EXIT592;condition="return == true"
+Signature601168464 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature601168464 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature601168464 /// java.security.Signature.update(byte[]):::EXIT668
+Signature601168464 /// java.security.Signature.verify(byte[]):::EXIT592;condition="return == true"
+Signature865730806 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature865730806 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature865730806 /// java.security.Signature.update(byte[], int, int):::EXIT689
+Signature91027589 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature91027589 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature91027589 /// java.security.Signature.update(byte[]):::EXIT668
+Signature91027589 /// java.security.Signature.verify(byte[]):::EXIT592;condition="return == true"
+Signature1957430703 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature1957430703 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature1957430703 /// java.security.Signature.update(byte[]):::EXIT668
+Signature1957430703 /// java.security.Signature.verify(byte[]):::EXIT592;condition="return == true"
+Signature803438195 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature803438195 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature803438195 /// java.security.Signature.update(byte[]):::EXIT668
+Signature803438195 /// java.security.Signature.verify(byte[]):::EXIT592;condition="return == true"
+Signature1868402667 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature1868402667 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature1868402667 /// java.security.Signature.update(byte[], int, int):::EXIT689
+Signature1868402667 /// java.security.Signature.verify(byte[]):::EXIT592;condition="return == true"
+Signature877491441 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature877491441 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature877491441 /// java.security.Signature.update(byte[], int, int):::EXIT689
+Signature1987004200 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature1987004200 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature1987004200 /// java.security.Signature.update(byte[]):::EXIT668
+Signature1987004200 /// java.security.Signature.verify(byte[]):::EXIT592;condition="return == true"
+Signature157499448 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature157499448 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature157499448 /// java.security.Signature.update(byte[], int, int):::EXIT689
+Signature1729846030 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature1729846030 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature1729846030 /// java.security.Signature.update(byte[], int, int):::EXIT689
+Signature1729846030 /// java.security.Signature.verify(byte[]):::EXIT592;condition="not(return == true)"
+Signature182865565 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature182865565 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature182865565 /// java.security.Signature.update(byte[], int, int):::EXIT689
+Signature1312685496 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature1312685496 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature1312685496 /// java.security.Signature.update(byte[]):::EXIT668
+Signature1312685496 /// java.security.Signature.verify(byte[]):::EXIT592;condition="return == true"
+Signature1090146005 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature1090146005 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature1090146005 /// java.security.Signature.update(byte[]):::EXIT668
+Signature1090146005 /// java.security.Signature.verify(byte[]):::EXIT592;condition="return == true"
+Signature1816591257 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature1816591257 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature1816591257 /// java.security.Signature.update(byte[]):::EXIT668
+Signature1816591257 /// java.security.Signature.verify(byte[]):::EXIT592;condition="return == true"
+Signature1640778002 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature1640778002 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature1640778002 /// java.security.Signature.update(byte[]):::EXIT668
+Signature1640778002 /// java.security.Signature.verify(byte[]):::EXIT592;condition="return == true"
+Signature86009825 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature86009825 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature86009825 /// java.security.Signature.update(byte[], int, int):::EXIT689
+Signature222339261 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature222339261 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature222339261 /// java.security.Signature.update(byte[]):::EXIT668
+Signature222339261 /// java.security.Signature.verify(byte[]):::EXIT592;condition="return == true"
+Signature1506040926 /// java.security.Signature.Signature(java.lang.String):::EXIT137
+Signature1506040926 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422
+Signature1506040926 /// java.security.Signature.update(byte[]):::EXIT668
+Signature1506040926 /// java.security.Signature.verify(byte[]):::EXIT592;condition="return == true"

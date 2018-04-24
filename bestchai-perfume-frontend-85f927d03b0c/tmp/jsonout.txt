@@ -1,22 +1,22 @@
-INFO: Using random seed: 1524601173675 
+INFO: Using random seed: 1524605431476 
 INFO: Parsing input files.. 
-INFO: Successfully parsed 13 traces, containing a total of 52 events from [/Users/annadeng/Documents/Courses/Grad_4/621/Project/Universal-Model-Inference/bestchai-perfume-frontend-85f927d03b0c/./tmp/log.txt] 
-INFO: Parsing took 7ms 
+INFO: Successfully parsed 49 traces, containing a total of 184 events from [/Users/annadeng/Documents/Courses/Grad_4/621/Project/Universal-Model-Inference/bestchai-perfume-frontend-85f927d03b0c/./tmp/log.txt] 
+INFO: Parsing took 13ms 
 INFO: Generating inter-event temporal relation... 
-INFO: Generating temporal relation took 6ms 
+INFO: Generating temporal relation took 10ms 
 INFO: Mining invariants [synoptic.invariants.miners.ChainWalkingTOInvMiner].. 
-INFO: Mining took 13ms 
+INFO: Mining took 14ms 
 INFO: Mining performance-constrained invariants... 
-INFO: Constrained mining took 66ms 
-INFO: Mined 150 invariants 
+INFO: Constrained mining took 48ms 
+INFO: Mined 48 invariants 
 INFO: Creating initial partition graph. 
 INFO: Creating partition graph took 2ms 
 INFO: Refining (Splitting)... 
-INFO: Splitting took 81ms 
+INFO: Splitting took 48ms 
 INFO: Coarsening (Merging).. 
-INFO: Merging took 121ms 
-INFO: Exporting final graph [13 nodes].. 
+INFO: Merging took 2ms 
+INFO: Exporting final graph [8 nodes].. 
 INFO: Not outputting model due to flag --noModelOutput 
 INFO: Exporting took 0ms 
 INFO: Exporting final graph as a JSON object... 
-INFO: Exporting JSON object took 12ms 
+INFO: Exporting JSON object took 14ms 
