@@ -137,7 +137,7 @@ function writeSynopticArg(alg){
 }
 
 function getAlg(){
-	return this. alg;
+	return this.alg;
 }
 
 // function write() {
