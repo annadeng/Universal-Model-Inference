@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 -r (?<ip>.+), (?<TYPE>.+), .+
+=======
+-r (?<ip>) /// java.util.StringTokenizer.(?<TYPE>.+)
+>>>>>>> 50a86c1a6ed6bf6d441dacb899d31828f6de748d
 -m \\k<ip>
 -o ./tmp/json
 -j
