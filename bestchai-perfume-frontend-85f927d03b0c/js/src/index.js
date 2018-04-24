@@ -10,6 +10,12 @@ function openParsingDialog() {
     $("#parsing-progressbar").progressbar({ value: false });
 }
 
+function fetchModel(alg) {
+    console.log(alg);
+    if(alg === 'perfume') fetchPerfumeModel();
+    else if(alg === 'synoptic') fetchSynopticModel();
+}
+
 function fetchSynopticModel() {
     if(formIsFilledOut()) {
         openParsingDialog();
@@ -41,7 +47,7 @@ function fetchPerfumeModel() {
         var parameters =  { logfile: $("#logtext").val(), args: $("#argsfield").val(), requestID: requestID };
         $.ajax({
             type:"POST", 
-            url:"http://localhost:8080/jsonperfume.php", 
+            url:"http://localhost:8080/jsonsynoptic.php", 
             data:parameters
         }).done(function(model) {
             console.log(parameters)

@@ -101,7 +101,6 @@ function openParsingDialog() {
 
 function fetchModel(alg) {
     console.log(alg);
-    if(alg === 'perfume') console.log(true);
     if(alg === 'perfume') fetchModel_perfume();
     else if(alg === 'synoptic') fetchModel_Synoptic();
 }
@@ -112,7 +111,6 @@ function fetchModel_perfume() {
         $.ajax({
             type:"POST", 
             url:"http://localhost/json1-perfume.php", 
-            //url:"http://localhost/json1-synoptic.php", 
             data:parameters
         }).done(function(model) {
             console.log(parameters);
@@ -137,21 +135,20 @@ function fetchModel_Synoptic() {
         openParsingDialog();
         var parameters =  { logfile: $("#logtext").val(), args: $("#argsfield").val(), requestID: requestID };
         $.ajax({
-            type:"POST", 
-            //url:"http://localhost/json1-perfume.php", 
+            type:"POST",  
             url:"http://localhost/json1-synoptic.php", 
             data:parameters
-        }).done(function(model_synoptic) {
+        }).done(function(model) {
             console.log(parameters);
             console.log("synoptic");
-            if(requestID == model_synoptic.responseID) {
+            if(requestID == model.responseID) {
                 requestID++; 
-                data = model_synoptic; 
+                data = model; 
                 revealModel();
             }
-        }).error(function(model_synoptic) {
+        }).error(function(model) {
             alert("An error occured. Please try again later."); 
-            alert(model_synoptic.responseText);});
+            alert(model.responseText);});
         return parameters;
     }
     else {
