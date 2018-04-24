@@ -10,17 +10,111 @@ function openParsingDialog() {
     $("#parsing-progressbar").progressbar({ value: false });
 }
 
-function fetchModel() {
+// function fetchModel() {
+//     //fetchModel_perfume();
+//     //fetchModel_Synoptic();
+//     if(formIsFilledOut()) {
+//         openParsingDialog();
+//         var parameters1 =  { logfile: $("#logtext").val(), args: $("#argsfield").val(), requestID: requestID };
+//         var parameters2 =  { logfile: $("#logtext").val(), args: $("#argsfield").val(), requestID: ++requestID };
+
+//         $.ajax({url: "http://localhost/json1-perfume1.php",type:'POST',data:parameters1,success: function(model1){
+//             $.ajax({url: "http://localhost/json1-synoptic1.php",type:'POST',data:parameters2,success: function(model2){
+                    
+//                             console.log(parameters1);
+//                             console.log(parameters2);
+//                             var data1, data2;
+//                             if(requestID - 1 == model1.responseID) {
+                                
+//                                 data1 = model1; 
+//                                 //revealModel(data1);
+//                             }
+//                             if(requestID == model2.responseID) {
+                                
+//                                 data2 = model2; 
+//                                 //revealModel(data2);
+//                             }
+//                             requestID++; 
+//                             revealModel_both(data1, data2);
+ 
+//                         }
+//                  })
+//             }
+//          });
+  
+
+
+//         // var m1 = $.ajax({
+//         //     type:"POST", 
+//         //     url:"http://localhost/json1-perfume.php", 
+//         //     //url:"http://localhost/json1-synoptic.php", 
+//         //     data:parameters1
+//         // });
+//         // var m2 = $.ajax({
+//         //     type:"POST", 
+//         //     //url:"http://localhost/json1-perfume.php", 
+//         //     url:"http://localhost/json1-synoptic.php", 
+//         //     data:parameters2
+//         // });
+//         // $.when(m1, m2).then(function(model1, model2){
+//         //     console.log(parameters1);
+//         //     console.log(parameters2);
+//         //     console.log("both");
+//         //     if(requestID == model1.responseID) {
+//         //         //requestID++; 
+//         //         var data1 = model1; 
+//         //         revealModel(data1);
+//         //     }
+//         //     if(requestID == model2.responseID) {
+//         //         //requestID++; 
+//         //         var data2 = model2; 
+//         //         revealModel(data2);
+//         //     }
+//         //     }
+//         // ).error(function(model1, model2) {
+//         //     alert("An error occured. Please try again later."); 
+//         //     alert(model1.responseText);
+//         //     alert(model2.responseText);});
+//         // return parameters1 + '\n' + parameters2;
+//     }
+//     else {
+//         alert("You must enter both a log and regular expressions before Perfume can infer a model.");
+//     }
+        
+    //     ).done(function(model) {
+    //         console.log(parameters);
+    //         console.log("both");
+    //         if(requestID == model_synoptic.responseID) {
+    //             requestID++; 
+    //             data = model; 
+    //             revealModel();
+    //         }
+    //     }).error(function(model) {
+    //         alert("An error occured. Please try again later."); 
+    //         alert(model_synoptic.responseText);});
+    //     return parameters;
+    // }
+    // else {
+    //     alert("You must enter both a log and regular expressions before Perfume can infer a model.");
+    // }
+// };
+
+function fetchModel(alg) {
+    console.log(alg);
+    if(alg === 'perfume') fetchModel_perfume();
+    else if(alg === 'synoptic') fetchModel_Synoptic();
+}
+function fetchModel_perfume() {
     if(formIsFilledOut()) {
         openParsingDialog();
         var parameters =  { logfile: $("#logtext").val(), args: $("#argsfield").val(), requestID: requestID };
         $.ajax({
             type:"POST", 
             url:"http://localhost/json1-perfume.php", 
-            //url:"http://localhost/json1-synoptic.php", 
             data:parameters
         }).done(function(model) {
-            console.log(parameters)
+            console.log(parameters);
+            console.log("perfume");
             if(requestID == model.responseID) {
                 requestID++; 
                 data = model; 
@@ -35,6 +129,50 @@ function fetchModel() {
         alert("You must enter both a log and regular expressions before Perfume can infer a model.");
     }
 };
+
+function fetchModel_Synoptic() {
+    if(formIsFilledOut()) {
+        openParsingDialog();
+        var parameters =  { logfile: $("#logtext").val(), args: $("#argsfield").val(), requestID: requestID };
+        $.ajax({
+            type:"POST",  
+            url:"http://localhost/json1-synoptic.php", 
+            data:parameters
+        }).done(function(model) {
+            console.log(parameters);
+            console.log("synoptic");
+            if(requestID == model.responseID) {
+                requestID++; 
+                data = model; 
+                revealModel();
+            }
+        }).error(function(model) {
+            alert("An error occured. Please try again later."); 
+            alert(model.responseText);});
+        return parameters;
+    }
+    else {
+        alert("You must enter both a log and regular expressions before Perfume can infer a model.");
+    }
+};
+
+// function revealModel_both(data1, data2) {
+//     $("#parsing-dialog").dialog("close");
+//     unhighlight(); // highlightInput.js
+//     clearModel(); // fsa2.js - added to fix dagre-d3 failure, issue 104
+//     drawModel(data1); // fsa2.js
+//     drawModelLegend();
+//     drawInvariants(data1); // invariants.js
+//     handleExpand(-1);
+
+//     unhighlight(); // highlightInput.js
+//     //clearModel(); // fsa2.js - added to fix dagre-d3 failure, issue 104
+//     drawModel(data2); // fsa2.js
+//     drawModelLegend();
+//     drawInvariants(data2); // invariants.js
+//     handleExpand(-1);
+// }
+
 
 function revealModel() {
     $("#parsing-dialog").dialog("close");

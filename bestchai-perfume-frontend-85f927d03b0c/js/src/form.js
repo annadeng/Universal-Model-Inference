@@ -34,7 +34,8 @@ var s_shoppingcartargs = "-r (?<ip>) .+ \"GET HTTP/1.1 /(?<TYPE>.+).php\"\n-m \\
 var logstring;
 var argstring;
 
-var modelname
+var modelname;
+var alg;
 
 function writeBrowserModel(modelname) {
     this.modelname = modelname
@@ -67,7 +68,8 @@ function writeShoppingCartModel(modelname) {
 }
 
 
-function writePerfumeArg(){
+function writePerfumeArg(alg){
+	this.alg = alg;
     switch(modelname){
         case "browser":
             argstring = browserargs;
@@ -89,7 +91,31 @@ function writePerfumeArg(){
 
 }
 
-function writeSynopticArg(){
+function writeArg(alg){
+	this.alg = alg;
+    switch(modelname){
+        case "browser":
+            argstring = browserargs + '\n' + s_browserargs;
+            break;
+        case "connection":
+            argstring = connectionargs + '\n' + s_connectionargs;
+            break;
+        case "radius":
+            argstring = radiusargs + '\n' + s_radiusargs;
+            break;
+        case "djq":
+            argstring = djqargs + '\n' + s_djqargs;
+            break;
+        case "shopping":
+            argstring = shoppingcartargs + '\n' + s_shoppingcartargs;
+            break;
+    }
+    $("#argsfield").val(argstring);
+
+}
+
+function writeSynopticArg(alg){
+	this.alg = alg;
     switch(modelname){
         case "browser":
             argstring = s_browserargs;
@@ -108,6 +134,10 @@ function writeSynopticArg(){
             break;
     }
     $("#argsfield").val(argstring);
+}
+
+function getAlg(){
+	return this.alg;
 }
 
 // function write() {
