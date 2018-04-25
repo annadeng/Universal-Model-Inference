@@ -151,6 +151,28 @@ function writeSynopticArg(alg){
     $("#argsfield").val(argstring);
 }
 
+function writeKTailArg(alg){
+	this.alg = alg;
+    switch(modelname){
+        case "browser":
+            argstring = s_browserargs;
+            break;
+        case "connection":
+            argstring = s_connectionargs;
+            break;
+        case "radius":
+            argstring = s_radiusargs;
+            break;
+        case "djq":
+            argstring = s_djqargs;
+            break;
+        case "shopping":
+            argstring = s_shoppingcartargs;
+            break;
+    }
+    $("#argsfield").val(argstring);
+}
+
 function getAlg(){
 	return this.alg;
 }
