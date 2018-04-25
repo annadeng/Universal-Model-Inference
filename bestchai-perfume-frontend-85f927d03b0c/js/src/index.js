@@ -14,7 +14,33 @@ function fetchModel(alg) {
     console.log(alg);
     if(alg === 'perfume') fetchPerfumeModel();
     else if(alg === 'synoptic') fetchSynopticModel();
+    else if (alg === 'ktail') fetchKTailModel();
 }
+
+function fetchKTailModel() {
+    if(formIsFilledOut()) {
+        openParsingDialog();
+        var parameters =  { logfile: $("#logtext").val(), args: $("#argsfield").val(), requestID: requestID };
+        $.ajax({
+            type:"POST", 
+            url:"http://localhost:8080/jsonktail.php", 
+            data:parameters
+        }).done(function(model) {
+            console.log(parameters)
+            if(requestID == model.responseID) {
+                requestID++; 
+                data = model; 
+                revealModel();
+            }
+        }).error(function(model) {
+            alert("An error occured. Please try again later."); 
+            alert(model.responseText);});
+        return parameters;
+    }
+    else {
+        alert("You must enter both a log and regular expressions before Perfume can infer a model.");
+    }
+};
 
 function fetchSynopticModel() {
     if(formIsFilledOut()) {

@@ -1,0 +1,33 @@
+digraph {
+  0 [shape=circle,label=""];
+  0 -> 5 [label="hasMoreTokens():::EXIT308;condition="return == true""]
+  0 -> 4 [label="StringTokenizer(java.lang.String, java.lang.String, boolean):::EXIT187"]
+  1 [shape=circle,label=""];
+  1 -> 0 [label="StringTokenizer(java.lang.String, java.lang.String, boolean):::EXIT187"]
+  2 [shape=circle,label=""];
+  initial [shape=plaintext,label=""];
+  initial -> 2
+  2 -> 1 [label="INITIAL"]
+  3 [shape=circle,label=""];
+  3 -> 6 [label="nextToken():::EXIT336"]
+  4 [shape=circle,label=""];
+  4 -> 5 [label="hasMoreTokens():::EXIT308;condition="return == true""]
+  5 [shape=circle,label=""];
+  5 -> 6 [label="nextToken():::EXIT336"]
+  6 [shape=circle,label=""];
+  6 -> 8 [label="hasMoreTokens():::EXIT308;condition="not(return == true)""]
+  6 -> 9 [label="hasMoreTokens():::EXIT308;condition="return == true""]
+  6 -> 10 [label="TERMINAL"]
+  7 [shape=circle,label=""];
+  7 -> 5 [label="hasMoreTokens():::EXIT308;condition="return == true""]
+  8 [shape=circle,label=""];
+  8 -> 11 [label="hasMoreTokens():::EXIT308;condition="not(return == true)""]
+  8 -> 10 [label="TERMINAL"]
+  9 [shape=circle,label=""];
+  9 -> 3 [label="hasMoreTokens():::EXIT308;condition="return == true""]
+  9 -> 6 [label="nextToken():::EXIT336"]
+  10 [shape=doublecircle,label=""];
+  11 [shape=circle,label=""];
+  11 -> 10 [label="TERMINAL"]
+  11 -> 7 [label="StringTokenizer(java.lang.String, java.lang.String, boolean):::EXIT187"]
+}
