@@ -4,6 +4,7 @@ from sets import Set;
 
 maxIntersectionCount = 0;
 intersect = [];
+maxProb = 0.0;
 
 def buildNodeEdge(nodeMap, edgeMap, G):
 	for node in G.nodes():
@@ -12,7 +13,9 @@ def buildNodeEdge(nodeMap, edgeMap, G):
 
 	for edge in G.edges():
 		key = edge[0]+":"+edge[1];
-		edgeMap[key] = 0;
+		prob = edge.attr.get('label');
+		#print prob;
+		edgeMap[key] = prob;
 
 def buildNodeMap(nodeMap, G):
 	for node in G.nodes():
@@ -24,7 +27,7 @@ def buildNodeMap(nodeMap, G):
 def buildEdgeMap(edgeMap, G):
 	for edge in G.edges():
 		edgeMap[edge[0] + ":" + edge[1]] = 0;
-
+'''
 def calIntersection(identicalMap, s_edgeMap, p_edgeMap):
 	intersectCount = 0;
 	localIntersect = [];
@@ -45,7 +48,36 @@ def calIntersection(identicalMap, s_edgeMap, p_edgeMap):
 		#print intersect;
 		#print maxIntersectionCount;
 	#print identicalMap;
-
+'''
+#add probability
+def calIntersection(identicalMap, s_edgeMap, p_edgeMap):
+	intersectCount = 0;
+	localIntersect = [];
+	localProb = 0.0;
+	for s_edge in s_edgeMap.keys():
+		prob = s_edgeMap[s_edge].split(':')[1];
+		
+		s_pair = s_edge.split(':');
+		p_src = identicalMap[s_pair[0]];
+		p_dst = identicalMap[s_pair[1]];
+		p_edge = p_src + ":" + p_dst;
+		if p_edge in p_edgeMap:
+			#s_edgeMap[s_edge] = 1;
+			localProb += float(prob);
+			#print localProb;
+			intersectCount += 1;
+			localIntersect.append(s_edge);
+	global maxIntersectionCount;
+	global intersect;
+	global maxProb;
+	if (localProb > maxProb) or ((localProb == maxProb) and (intersectCount > maxIntersectionCount)):
+		maxIntersectionCount = intersectCount;
+		maxProb = localProb;
+		intersect = localIntersect;
+		#print intersect;
+		#print maxIntersectionCount;
+		#print maxProb;
+		#print identicalMap;
 
 def findIdenticalNode(s_nodeMap, p_nodeMap, pLabels, identicalMap, s_edgeMap, p_edgeMap, p_labelPointer):
 	if p_labelPointer >= len(p_nodeMap):
@@ -67,7 +99,7 @@ def findIdenticalNode(s_nodeMap, p_nodeMap, pLabels, identicalMap, s_edgeMap, p_
 		return;
 	
 
-def outputIntersection(G, outputfile):
+def outputIntersection(G, outputfile, pngfile):
 	for edge in G.edges():
 		s = edge[0]+":"+edge[1];
 		
@@ -77,15 +109,16 @@ def outputIntersection(G, outputfile):
 	
 	
 	G.write(outputfile);
-	#G.layout(prog='dot');
-	#G.draw(outputfile);
+	G.layout(prog='dot');
+	G.draw(pngfile,format='png',prog='dot')
 	#print G.string();
 
 
 def main():
-	f1 = "tmp/test.dot"; #synoptic
-	f2 = "tmp/stringtoken.dot"; #perfume
-	outputfile = "tmp/intersection.dot";
+	f1 = "tmp/StringTokenizer-models/synoptictest_namefixed.dot"; #synoptic
+	f2 = "tmp/StringTokenizer-models/ktailtest_namefixed.dot"; #perfume
+	outputfile = "tmp/StringTokenizer-models/intersection.dot";
+	outputpng = "tmp/StringTokenizer-models/intersection.png";
 	G1 = AGraph(f1);
 	G2 = AGraph(f2);
 
@@ -120,10 +153,12 @@ def main():
 	findIdenticalNode(s_nodeMap, p_nodeMap, pLabels, identicalMap, s_edgeMap, p_edgeMap, p_labelPointer);
 	
 	print maxIntersectionCount;
+	print maxProb;
 	print intersect; #from synoptic
 	print identicalMap; # synoptic: perfume
 
-	outputIntersection(G1, outputfile);
+
+	outputIntersection(G1, outputfile, outputpng);
 	
 
 
