@@ -30,12 +30,21 @@ var s_djqargs = "-r .+: Executing(?<TYPE>)on(?<ip>)\n-m \\\\k<ip>\n";
 // var s_shoppingcartlog ="74.15.155.103 [06/Jan/2011:07:24:13] \"GET HTTP/1.1 /check-out.php\"\n13.15.232.201 [06/Jan/2011:07:24:19] \"GET HTTP/1.1 /check-out.php\"\n13.15.232.201 [06/Jan/2011:07:25:33] \"GET HTTP/1.1 /invalid-coupon.php\"\n74.15.155.103 [06/Jan/2011:07:27:05] \"GET HTTP/1.1 /valid-coupon.php\"\n74.15.155.199 [06/Jan/2011:07:28:43] \"GET HTTP/1.1 /check-out.php\"\n74.15.155.103 [06/Jan/2011:07:28:14] \"GET HTTP/1.1 /reduce-price.php\"\n74.15.155.199 [06/Jan/2011:07:29:02] \"GET HTTP/1.1 /get-credit-card.php\"\n13.15.232.201 [06/Jan/2011:07:30:22] \"GET HTTP/1.1 /reduce-price.php\"\n74.15.155.103 [06/Jan/2011:07:30:55] \"GET HTTP/1.1 /check-out.php\"\n13.15.232.201 [06/Jan/2011:07:31:17] \"GET HTTP/1.1 /check-out.php\"\n13.15.232.201 [06/Jan/2011:07:31:20] \"GET HTTP/1.1 /get-credit-card.php\"\n74.15.155.103 [06/Jan/2011:07:31:44] \"GET HTTP/1.1 /get-credit-card.php\"";
 var s_shoppingcartargs = "-r (?<ip>) .+ \"GET HTTP/1.1 /(?<TYPE>.+).php\"\n-m \\\\k<ip>";
 
+var signaturelog = "Signature337152244 /// java.security.Signature.Signature(java.lang.String):::EXIT137\nSignature337152244 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422\nSignature337152244 /// java.security.Signature.update(byte[]):::EXIT668";
+var signatureargs = "-r (?<ip>) /// (?<TYPE>.+)\n-m \\\\k<ip>";
+
 
 var logstring;
 var argstring;
 
 var modelname;
 var alg;
+
+function writeSignatureModel(modelname) {
+    this.modelname = modelname
+    logstring = signaturelog; 
+    $("#logtext").val(logstring);
+}
 
 function writeBrowserModel(modelname) {
     this.modelname = modelname
@@ -86,6 +95,9 @@ function writePerfumeArg(alg){
         case "shopping":
             argstring = shoppingcartargs;
             break;
+        case "signature":
+        	argstring = signatureargs;
+        	break;
     }
     $("#argsfield").val(argstring);
 
@@ -132,6 +144,9 @@ function writeSynopticArg(alg){
         case "shopping":
             argstring = s_shoppingcartargs;
             break;
+        case "signature":
+        	argstring = signatureargs;
+        	break;
     }
     $("#argsfield").val(argstring);
 }
