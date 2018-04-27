@@ -1,0 +1,28 @@
+digraph G {
+	0	 [label=Signature_EXIT137];
+	1	 [label=initVerify_EXIT422];
+	0 -> 1;
+	2	 [label=initVerify_EXIT422];
+	0 -> 2;
+	3	 [label=update_EXIT668];
+	1 -> 3;
+	4	 [label=update_EXIT689];
+	2 -> 4;
+	5	 [label=update_EXIT689];
+	2 -> 5;
+	6	 [label=update_EXIT689];
+	2 -> 6;
+	8	 [label=verify_EXIT592_TRUE];
+	3 -> 8;
+	7	 [label=verify_EXIT592_FALSE];
+	4 -> 7;
+	5 -> 8;
+	9	 [label=TERMINAL,
+		shape=diamond];
+	6 -> 9;
+	7 -> 9;
+	8 -> 9;
+	10	 [label=INITIAL,
+		shape=box];
+	10 -> 0;
+}

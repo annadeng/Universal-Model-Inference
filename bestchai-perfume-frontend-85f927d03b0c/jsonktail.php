@@ -19,7 +19,7 @@ fwrite($jsonfh, "\n");
 fwrite($jsonfh, "-o ./tmp/json\n");
 fclose($jsonfh);
 
-shell_exec("./invarimint.sh --invMintKTails --outputPathPrefix ./tmp/invariminttest -c ./tmp/jsonargs.txt ./tmp/log.txt 2>&1");
+shell_exec("./invarimint.sh --exportStdAlgPGraph --invMintKTails --outputPathPrefix ./tmp/ktailtest -c ./tmp/jsonargs.txt ./tmp/log.txt 2>&1");
 
 $output = shell_exec(' ./invarimint.sh --invMintKTails -c ./tmp/jsonargs.txt ' . "./tmp/log.txt 2>&1");
 
