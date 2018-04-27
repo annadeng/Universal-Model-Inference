@@ -1,0 +1,18 @@
+Signature = S0,
+
+S0 = (signature_EXIT137 -> S1),
+
+S1 = (initVerify_EXIT422 -> S2),
+
+/** S3 = (initVerify_EXIT422 -> S2
+ *		| update_EXIT668 -> S3
+ *		| update_EXIT689 -> S3),
+ */
+
+S2 = (initVerify_EXIT422 -> S2
+		| verify_EXIT592_TRUE -> S2
+		| verify_EXIT592_FALSE -> S2
+		| update_EXIT668 -> S2
+		| update_EXIT689 -> S2).
+
+||MTS_Signature = (Signature).

@@ -1,0 +1,20 @@
+digraph G {
+  0 [label="ZipOutputStream(java.io.OutputStream):::EXIT90"];
+  1 [label="close():::EXIT324"];
+  2 [label="closeEntry():::EXIT245"];
+  3 [label="putNextEntry(java.util.zip.ZipEntry):::EXIT180"];
+  4 [label="write(byte[], int, int):::EXIT286"];
+  5 [label="TERMINAL",shape=diamond];
+  6 [label="INITIAL",shape=box];
+0->3 [label="P: 1.00"];
+1->0 [label="P: 0.38"];
+1->5 [label="P: 0.63"];
+2->1 [label="P: 0.09"];
+2->2 [label="P: 0.09"];
+2->3 [label="P: 0.83"];
+3->4 [label="P: 1.00"];
+4->2 [label="P: 0.02"];
+4->3 [label="P: 0.00"];
+4->4 [label="P: 0.98"];
+6->0 [label="P: 1.00"];
+}

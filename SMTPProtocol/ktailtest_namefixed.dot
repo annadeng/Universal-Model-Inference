@@ -1,0 +1,42 @@
+digraph G {
+	0	 [label=SMTPProtocol_EXIT134];
+	15	 [label=TERMINAL,
+		shape=diamond];
+	0 -> 15;
+	1	 [label=SMTPProtocol_EXIT134];
+	6	 [label=getState_EXIT733];
+	1 -> 6;
+	7	 [label=getState_EXIT733];
+	1 -> 7;
+	8	 [label=getState_EXIT733];
+	1 -> 8;
+	2	 [label=data_EXIT535];
+	12	 [label=quit_EXIT559];
+	2 -> 12;
+	3	 [label=ehlo_EXIT298];
+	3 -> 8;
+	4	 [label=ehlo_EXIT298];
+	9	 [label=mail_EXIT415];
+	4 -> 9;
+	5	 [label=ehlo_EXIT298];
+	14	 [label=startTLS_EXIT232];
+	5 -> 14;
+	10	 [label=openPort_EXIT177];
+	6 -> 10;
+	11	 [label=openPort_EXIT186];
+	7 -> 11;
+	8 -> 15;
+	13	 [label=rcpt_EXIT445];
+	9 -> 13;
+	10 -> 3;
+	10 -> 4;
+	10 -> 5;
+	11 -> 15;
+	12 -> 15;
+	13 -> 2;
+	14 -> 8;
+	16	 [label=INITIAL,
+		shape=box];
+	16 -> 0;
+	16 -> 1;
+}
