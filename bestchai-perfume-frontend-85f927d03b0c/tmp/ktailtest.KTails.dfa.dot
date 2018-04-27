@@ -1,0 +1,44 @@
+digraph {
+  0 [shape=circle,label=""];
+  0 -> 6 [label="getState():::EXIT733"]
+  1 [shape=circle,label=""];
+  1 -> 7 [label="openPort():::EXIT177"]
+  2 [shape=circle,label=""];
+  2 -> 15 [label="openPort():::EXIT186"]
+  3 [shape=circle,label=""];
+  3 -> 6 [label="getState():::EXIT733"]
+  4 [shape=circle,label=""];
+  4 -> 17 [label="data(java.io.InputStream):::EXIT535"]
+  5 [shape=doublecircle,label=""];
+  6 [shape=circle,label=""];
+  6 -> 5 [label="TERMINAL"]
+  7 [shape=circle,label=""];
+  7 -> 3 [label="ehlo(java.net.InetAddress):::EXIT298"]
+  7 -> 8 [label="ehlo(java.net.InetAddress):::EXIT298"]
+  7 -> 16 [label="ehlo(java.net.InetAddress):::EXIT298"]
+  8 [shape=circle,label=""];
+  8 -> 10 [label="mail(org.columba.ristretto.message.Address):::EXIT415"]
+  9 [shape=circle,label=""];
+  initial [shape=plaintext,label=""];
+  initial -> 9
+  9 -> 11 [label="INITIAL"]
+  10 [shape=circle,label=""];
+  10 -> 4 [label="rcpt(org.columba.ristretto.message.Address):::EXIT445"]
+  11 [shape=circle,label=""];
+  11 -> 12 [label="SMTPProtocol(java.lang.String, int):::EXIT134"]
+  11 -> 14 [label="SMTPProtocol(java.lang.String, int):::EXIT134"]
+  12 [shape=circle,label=""];
+  12 -> 5 [label="TERMINAL"]
+  13 [shape=circle,label=""];
+  13 -> 5 [label="TERMINAL"]
+  14 [shape=circle,label=""];
+  14 -> 1 [label="getState():::EXIT733"]
+  14 -> 2 [label="getState():::EXIT733"]
+  14 -> 6 [label="getState():::EXIT733"]
+  15 [shape=circle,label=""];
+  15 -> 5 [label="TERMINAL"]
+  16 [shape=circle,label=""];
+  16 -> 0 [label="startTLS():::EXIT232"]
+  17 [shape=circle,label=""];
+  17 -> 13 [label="quit():::EXIT559"]
+}

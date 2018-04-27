@@ -46,11 +46,10 @@
 <div id="form" style="width: 100%">
 	<fieldset><div id="innerform" style="margin: 0 auto; max-width:500px;">
 
-		<button id="algorithms-button" class="btn btn-primary dropdown-toggle" type="button" href="#"  data-jq-dropdown="#algorithms">Algorithms
-		<span class="caret"></span></button>
-
 		<button id="examples-button" class="btn btn-primary dropdown-toggle" type="button" href="#"  data-jq-dropdown="#examples">Examples
 		<span class="caret"></span></button>
+
+
 
 	    <div id="examples" class="jq-dropdown jq-dropdown-tip jq-dropdown-anchor-right">
 		  <ul class="jq-dropdown-menu">
@@ -63,6 +62,14 @@
 		  </ul>
 		</div>
 
+		<div id="algorithms" class="jq-dropdown jq-dropdown-tip jq-dropdown-anchor-right">
+		  <ul class="jq-dropdown-menu">
+		    <li><a onclick="writePerfumeArg('perfume');">Perfume</a></li>
+			<li><a onclick="writeSynopticArg('synoptic');">Synoptic</a></li>
+			<li><a onclick="writeKTailArg('ktail');">KTail</a></li>
+		  </ul>
+		</div>
+
 		<div style="clear:both"></div>
 
         <form>
@@ -72,22 +79,21 @@
 				</label>
 				<textarea id="logtext" name="logtext" class="input" rows="20"></textarea>
 				<br>
+
 				<label class="control-label" for="argsfield">
 					<span>Arguments</span>
 
-					<div id="algorithms" class="jq-dropdown jq-dropdown-tip jq-dropdown-anchor-right">
-					  <ul class="jq-dropdown-menu">
-					    <li><a onclick="writePerfumeArg('perfume');">Perfume</a></li>
-		    			<li><a onclick="writeSynopticArg('synoptic');">Synoptic</a></li>
-		    			<li><a onclick="writeKTailArg('ktail');">KTail</a></li>
-					  </ul>
-					</div>
 
+					<button id="algorithms-button" class="btn btn-primary dropdown-toggle" type="button" href="#"  data-jq-dropdown="#algorithms">Algorithms
+					<span class="caret"></span></button>
+					
 					<div id="argument-help">
 						<a href="https://github.com/ModelInference/synoptic/wiki/DocsSynopticCmdLineUsage#synoptic-regular-expressions" target="_blank">
 							<span id="argument-tip" class="ui-icon ui-icon-help" title="(Click '?' for more info!) Try an example above for sample regex arguments. '-r' defines how each line is parsed and must contain capture group TYPE and a resource group like DTIME. '-m' defines how event instances are identified as belonging to the same trace."></span>
 						</a>
 					</div>
+
+
 				</label>
                 <textarea id="argsfield" name="args" class="input" rows="5" style="width:100%;"></textarea>
 			</div>

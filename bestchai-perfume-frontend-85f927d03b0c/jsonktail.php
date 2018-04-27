@@ -21,7 +21,8 @@ fclose($jsonfh);
 
 shell_exec("./invarimint.sh --exportStdAlgPGraph --invMintKTails --outputPathPrefix ./tmp/ktailtest -c ./tmp/jsonargs.txt ./tmp/log.txt 2>&1");
 
-$output = shell_exec(' ./invarimint.sh --invMintKTails -c ./tmp/jsonargs.txt ' . "./tmp/log.txt 2>&1");
+$output = file_get_contents('./tmp/json.json')
+die(json_encode(array("message" => $output)));
 
 
 $json = file_get_contents('./tmp/json.json');
