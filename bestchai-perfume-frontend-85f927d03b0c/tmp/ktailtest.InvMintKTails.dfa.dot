@@ -1,38 +1,25 @@
 digraph {
   0 [shape=doublecircle,label=""];
   1 [shape=circle,label=""];
-  1 -> 5 [label="ehlo(java.net.InetAddress):::EXIT298"]
+  1 -> 8 [label="valid-coupon"]
+  1 -> 2 [label="invalid-coupon"]
+  1 -> 9 [label="get-credit-card"]
   2 [shape=circle,label=""];
-  2 -> 13 [label="quit():::EXIT559"]
+  2 -> 6 [label="reduce-price"]
   3 [shape=circle,label=""];
-  3 -> 0 [label="TERMINAL"]
-  3 -> 11 [label="getState():::EXIT733"]
-  4 [shape=circle,label=""];
-  4 -> 8 [label="getState():::EXIT733"]
-  5 [shape=circle,label=""];
-  5 -> 10 [label="mail(org.columba.ristretto.message.Address):::EXIT415"]
-  5 -> 4 [label="startTLS():::EXIT232"]
-  5 -> 14 [label="getState():::EXIT733"]
-  6 [shape=circle,label=""];
-  6 -> 3 [label="SMTPProtocol(java.lang.String, int):::EXIT134"]
-  7 [shape=circle,label=""];
-  7 -> 0 [label="TERMINAL"]
-  8 [shape=circle,label=""];
-  8 -> 0 [label="TERMINAL"]
-  9 [shape=circle,label=""];
-  9 -> 2 [label="data(java.io.InputStream):::EXIT535"]
-  10 [shape=circle,label=""];
-  10 -> 9 [label="rcpt(org.columba.ristretto.message.Address):::EXIT445"]
-  11 [shape=circle,label=""];
-  11 -> 0 [label="TERMINAL"]
-  11 -> 7 [label="openPort():::EXIT186"]
-  11 -> 1 [label="openPort():::EXIT177"]
-  12 [shape=circle,label=""];
   initial [shape=plaintext,label=""];
-  initial -> 12
-  12 -> 6 [label="INITIAL"]
-  13 [shape=circle,label=""];
-  13 -> 0 [label="TERMINAL"]
-  14 [shape=circle,label=""];
-  14 -> 0 [label="TERMINAL"]
+  initial -> 3
+  3 -> 4 [label="INITIAL"]
+  4 [shape=circle,label=""];
+  4 -> 1 [label="check-out"]
+  5 [shape=circle,label=""];
+  5 -> 7 [label="check-out"]
+  6 [shape=circle,label=""];
+  6 -> 7 [label="check-out"]
+  7 [shape=circle,label=""];
+  7 -> 9 [label="get-credit-card"]
+  8 [shape=circle,label=""];
+  8 -> 5 [label="reduce-price"]
+  9 [shape=circle,label=""];
+  9 -> 0 [label="TERMINAL"]
 }

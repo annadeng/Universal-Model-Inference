@@ -30,7 +30,7 @@ function fetchKTailModel() {
             if(requestID == model.responseID) {
                 requestID++; 
                 data = model; 
-                revealModel();
+                revealkTailModel();
             }
         }).error(function(model) {
             alert("An error occured. Please try again later."); 
@@ -100,6 +100,14 @@ function revealModel() {
     drawModelLegend();
     drawInvariants(data); // invariants.js
     handleExpand(-1);
+}
+
+function revealkTailModel(){
+    $("#parsing-dialog").dialog("close");
+    //clearModel(); 
+    drawDotModel(data);
+    handleExpand(-1);
+
 }
 
 function clearModelLegend() {

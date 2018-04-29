@@ -19,13 +19,13 @@ fwrite($jsonfh, "\n");
 fwrite($jsonfh, "-o ./tmp/json\n");
 fclose($jsonfh);
 
+$output = shell_exec(' ./synoptic.sh --noModelOutput -c ./tmp/jsonargs.txt ' . "./tmp/log.txt 2>&1");
+
 shell_exec("./invarimint.sh --exportStdAlgPGraph --invMintKTails --outputPathPrefix ./tmp/ktailtest -c ./tmp/jsonargs.txt ./tmp/log.txt 2>&1");
 
-$output = file_get_contents('./tmp/json.json')
-die(json_encode(array("message" => $output)));
+shell_exec("python dotToJson.py ./tmp/ktailtest.KTails.pGraph-final.dot ./tmp/ktailtest.InvMintKTails.json");
 
-
-$json = file_get_contents('./tmp/json.json');
+$json = file_get_contents('./tmp/ktailtest.InvMintKTails.json');
 
 $outputfh = fopen("./tmp/jsonout.txt", 'w') or die("can't open file");
 fwrite($outputfh, $output);

@@ -1,4 +1,3 @@
--r (?<ip>) /// org.columba.ristretto.smtp.SMTPProtocol.(?<TYPE>.+)
+-r (?<ip>) .+ "GET HTTP/1.1 /(?<TYPE>.+).php"
 -m \\k<ip>
 -o ./tmp/json
--j
