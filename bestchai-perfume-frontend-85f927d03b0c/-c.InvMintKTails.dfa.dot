@@ -1,0 +1,70 @@
+digraph {
+  0 [shape=circle,label=""];
+  0 -> 6 [label="177.176.181.25, quit, 272 "]
+  1 [shape=circle,label=""];
+  1 -> 22 [label="164.163.76.74, retrieve-image, 39"]
+  2 [shape=circle,label=""];
+  2 -> 30 [label="237.250.28.190, cache-image, 34"]
+  3 [shape=circle,label=""];
+  3 -> 9 [label="153.98.187.29, retrieve-image, 62"]
+  4 [shape=circle,label=""];
+  4 -> 31 [label="-m \\k<ip>"]
+  5 [shape=circle,label=""];
+  5 -> 17 [label="130.78.242.94, retrieve-image, 140 "]
+  6 [shape=circle,label=""];
+  6 -> 28 [label="195.88.181.89, cache-image, 0"]
+  7 [shape=circle,label=""];
+  7 -> 10 [label="130.78.242.94, cache-page, 0"]
+  8 [shape=doublecircle,label=""];
+  9 [shape=circle,label=""];
+  9 -> 25 [label="153.98.187.29, quit, 124"]
+  10 [shape=circle,label=""];
+  10 -> 24 [label="130.78.242.94, retrieve-page, 9"]
+  11 [shape=circle,label=""];
+  11 -> 18 [label="237.250.28.190, cache-page, 0"]
+  12 [shape=circle,label=""];
+  12 -> 7 [label="237.250.28.190, quit, 274 "]
+  13 [shape=circle,label=""];
+  13 -> 16 [label="164.163.76.74, retrieve-page, 9"]
+  14 [shape=circle,label=""];
+  14 -> 21 [label="195.88.181.89, quit, 54"]
+  15 [shape=circle,label=""];
+  15 -> 13 [label="164.163.76.74, cache-page, 0"]
+  15 -> 4 [label="-r (?<ip>.+), (?<TYPE>.+), (?<DTIME>.+)"]
+  16 [shape=circle,label=""];
+  16 -> 1 [label="164.163.76.74, cache-image, 18"]
+  17 [shape=circle,label=""];
+  17 -> 27 [label="130.78.242.94, quit, 162 "]
+  18 [shape=circle,label=""];
+  18 -> 2 [label="237.250.28.190, retrieve-page, 17"]
+  19 [shape=circle,label=""];
+  19 -> 23 [label="177.176.181.25, retrieve-page, 17"]
+  20 [shape=circle,label=""];
+  initial [shape=plaintext,label=""];
+  initial -> 20
+  20 -> 15 [label="INITIAL"]
+  21 [shape=circle,label=""];
+  21 -> 3 [label="153.98.187.29, cache-image, 0"]
+  22 [shape=circle,label=""];
+  22 -> 11 [label="164.163.76.74, quit, 160 "]
+  23 [shape=circle,label=""];
+  23 -> 32 [label="177.176.181.25, cache-image, 136 "]
+  24 [shape=circle,label=""];
+  24 -> 5 [label="130.78.242.94, cache-image, 118 "]
+  25 [shape=circle,label=""];
+  25 -> 8 [label="TERMINAL"]
+  26 [shape=circle,label=""];
+  26 -> 8 [label="TERMINAL"]
+  27 [shape=circle,label=""];
+  27 -> 19 [label="177.176.181.25, cache-page, 0"]
+  28 [shape=circle,label=""];
+  28 -> 14 [label="195.88.181.89, retrieve-image, 27"]
+  29 [shape=circle,label=""];
+  29 -> 26 [label="-j"]
+  30 [shape=circle,label=""];
+  30 -> 12 [label="237.250.28.190, retrieve-image, 104 "]
+  31 [shape=circle,label=""];
+  31 -> 29 [label="-o /tmp/json"]
+  32 [shape=circle,label=""];
+  32 -> 0 [label="177.176.181.25, retrieve-image, 204 "]
+}

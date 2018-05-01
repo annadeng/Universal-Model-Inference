@@ -1,0 +1,20 @@
+digraph G {
+  0 [label="Access-Accept"];
+  1 [label="Access-Challenge"];
+  2 [label="Access-Challenge"];
+  3 [label="Access-Reject"];
+  4 [label="Access-Request"];
+  5 [label="Access-Request"];
+  6 [label="TERMINAL",shape=diamond];
+  7 [label="INITIAL",shape=box];
+0->6 [label=""];
+1->4 [label="[96,112]"];
+2->4 [label="128"];
+3->6 [label=""];
+4->0 [label="[64,128]"];
+4->3 [label="[64,128]"];
+5->2 [label="[64,128]"];
+5->1 [label="[2.05E+3,3.07E+3]"];
+7->5 [label=""];
+7->4 [label=""];
+}

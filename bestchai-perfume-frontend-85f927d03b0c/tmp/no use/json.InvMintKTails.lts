@@ -1,0 +1,26 @@
+Invarimint = S2,
+
+S2 = (StringTokenizer(java.lang.String, java.lang.String, boolean):::EXIT187 -> S1),
+
+S1 = (hasMoreTokens():::EXIT308;condition="return == true" -> S0
+		| StringTokenizer(java.lang.String, java.lang.String, boolean):::EXIT187 -> S5),
+
+S0 = (nextToken():::EXIT336 -> S4),
+
+S5 = (hasMoreTokens():::EXIT308;condition="return == true" -> S0),
+
+S4 = (hasMoreTokens():::EXIT308;condition="not(return == true)" -> S6
+		| hasMoreTokens():::EXIT308;condition="return == true" -> S7),
+
+S6 = (hasMoreTokens():::EXIT308;condition="not(return == true)" -> S9),
+
+S7 = (hasMoreTokens():::EXIT308;condition="return == true" -> S10
+		| nextToken():::EXIT336 -> S4),
+
+S9 = (StringTokenizer(java.lang.String, java.lang.String, boolean):::EXIT187 -> S3),
+
+S10 = (nextToken():::EXIT336 -> S4),
+
+S3 = (hasMoreTokens():::EXIT308;condition="return == true" -> S0).
+
+||MTS_Invarimint = (Invarimint).

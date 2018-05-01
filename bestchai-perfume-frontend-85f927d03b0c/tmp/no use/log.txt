@@ -1,0 +1,52 @@
+SMTPProtocol772111086 /// org.columba.ristretto.smtp.SMTPProtocol.SMTPProtocol(java.lang.String, int):::EXIT134
+SMTPProtocol1377614405 /// org.columba.ristretto.smtp.SMTPProtocol.SMTPProtocol(java.lang.String, int):::EXIT134
+SMTPProtocol164230583 /// org.columba.ristretto.smtp.SMTPProtocol.SMTPProtocol(java.lang.String, int):::EXIT134
+SMTPProtocol164230583 /// org.columba.ristretto.smtp.SMTPProtocol.getState():::EXIT733
+SMTPProtocol1008646240 /// org.columba.ristretto.smtp.SMTPProtocol.SMTPProtocol(java.lang.String, int):::EXIT134
+SMTPProtocol1008646240 /// org.columba.ristretto.smtp.SMTPProtocol.getState():::EXIT733
+SMTPProtocol1557520988 /// org.columba.ristretto.smtp.SMTPProtocol.SMTPProtocol(java.lang.String, int):::EXIT134
+SMTPProtocol1557520988 /// org.columba.ristretto.smtp.SMTPProtocol.getState():::EXIT733
+SMTPProtocol135868227 /// org.columba.ristretto.smtp.SMTPProtocol.SMTPProtocol(java.lang.String, int):::EXIT134
+SMTPProtocol135868227 /// org.columba.ristretto.smtp.SMTPProtocol.getState():::EXIT733
+SMTPProtocol135868227 /// org.columba.ristretto.smtp.SMTPProtocol.openPort():::EXIT177
+SMTPProtocol135868227 /// org.columba.ristretto.smtp.SMTPProtocol.ehlo(java.net.InetAddress):::EXIT298
+SMTPProtocol135868227 /// org.columba.ristretto.smtp.SMTPProtocol.startTLS():::EXIT232
+SMTPProtocol135868227 /// org.columba.ristretto.smtp.SMTPProtocol.getState():::EXIT733
+SMTPProtocol2046182713 /// org.columba.ristretto.smtp.SMTPProtocol.SMTPProtocol(java.lang.String, int):::EXIT134
+SMTPProtocol2046182713 /// org.columba.ristretto.smtp.SMTPProtocol.getState():::EXIT733
+SMTPProtocol2046182713 /// org.columba.ristretto.smtp.SMTPProtocol.openPort():::EXIT186
+SMTPProtocol634779961 /// org.columba.ristretto.smtp.SMTPProtocol.SMTPProtocol(java.lang.String, int):::EXIT134
+SMTPProtocol634779961 /// org.columba.ristretto.smtp.SMTPProtocol.getState():::EXIT733
+SMTPProtocol634779961 /// org.columba.ristretto.smtp.SMTPProtocol.openPort():::EXIT177
+SMTPProtocol634779961 /// org.columba.ristretto.smtp.SMTPProtocol.ehlo(java.net.InetAddress):::EXIT298
+SMTPProtocol634779961 /// org.columba.ristretto.smtp.SMTPProtocol.mail(org.columba.ristretto.message.Address):::EXIT415
+SMTPProtocol634779961 /// org.columba.ristretto.smtp.SMTPProtocol.rcpt(org.columba.ristretto.message.Address):::EXIT445
+SMTPProtocol634779961 /// org.columba.ristretto.smtp.SMTPProtocol.data(java.io.InputStream):::EXIT535
+SMTPProtocol634779961 /// org.columba.ristretto.smtp.SMTPProtocol.quit():::EXIT559
+SMTPProtocol1009633633 /// org.columba.ristretto.smtp.SMTPProtocol.SMTPProtocol(java.lang.String, int):::EXIT134
+SMTPProtocol1009633633 /// org.columba.ristretto.smtp.SMTPProtocol.getState():::EXIT733
+SMTPProtocol1009633633 /// org.columba.ristretto.smtp.SMTPProtocol.openPort():::EXIT186
+SMTPProtocol2118116222 /// org.columba.ristretto.smtp.SMTPProtocol.SMTPProtocol(java.lang.String, int):::EXIT134
+SMTPProtocol2118116222 /// org.columba.ristretto.smtp.SMTPProtocol.getState():::EXIT733
+SMTPProtocol2118116222 /// org.columba.ristretto.smtp.SMTPProtocol.openPort():::EXIT177
+SMTPProtocol2118116222 /// org.columba.ristretto.smtp.SMTPProtocol.ehlo(java.net.InetAddress):::EXIT298
+SMTPProtocol2118116222 /// org.columba.ristretto.smtp.SMTPProtocol.mail(org.columba.ristretto.message.Address):::EXIT415
+SMTPProtocol2118116222 /// org.columba.ristretto.smtp.SMTPProtocol.rcpt(org.columba.ristretto.message.Address):::EXIT445
+SMTPProtocol2118116222 /// org.columba.ristretto.smtp.SMTPProtocol.data(java.io.InputStream):::EXIT535
+SMTPProtocol2118116222 /// org.columba.ristretto.smtp.SMTPProtocol.quit():::EXIT559
+SMTPProtocol148260869 /// org.columba.ristretto.smtp.SMTPProtocol.SMTPProtocol(java.lang.String, int):::EXIT134
+SMTPProtocol148260869 /// org.columba.ristretto.smtp.SMTPProtocol.getState():::EXIT733
+SMTPProtocol148260869 /// org.columba.ristretto.smtp.SMTPProtocol.openPort():::EXIT177
+SMTPProtocol148260869 /// org.columba.ristretto.smtp.SMTPProtocol.ehlo(java.net.InetAddress):::EXIT298
+SMTPProtocol148260869 /// org.columba.ristretto.smtp.SMTPProtocol.mail(org.columba.ristretto.message.Address):::EXIT415
+SMTPProtocol148260869 /// org.columba.ristretto.smtp.SMTPProtocol.rcpt(org.columba.ristretto.message.Address):::EXIT445
+SMTPProtocol148260869 /// org.columba.ristretto.smtp.SMTPProtocol.data(java.io.InputStream):::EXIT535
+SMTPProtocol148260869 /// org.columba.ristretto.smtp.SMTPProtocol.quit():::EXIT559
+SMTPProtocol467165034 /// org.columba.ristretto.smtp.SMTPProtocol.SMTPProtocol(java.lang.String, int):::EXIT134
+SMTPProtocol467165034 /// org.columba.ristretto.smtp.SMTPProtocol.getState():::EXIT733
+SMTPProtocol467165034 /// org.columba.ristretto.smtp.SMTPProtocol.openPort():::EXIT186
+SMTPProtocol749595579 /// org.columba.ristretto.smtp.SMTPProtocol.SMTPProtocol(java.lang.String, int):::EXIT134
+SMTPProtocol749595579 /// org.columba.ristretto.smtp.SMTPProtocol.getState():::EXIT733
+SMTPProtocol749595579 /// org.columba.ristretto.smtp.SMTPProtocol.openPort():::EXIT177
+SMTPProtocol749595579 /// org.columba.ristretto.smtp.SMTPProtocol.ehlo(java.net.InetAddress):::EXIT298
+SMTPProtocol749595579 /// org.columba.ristretto.smtp.SMTPProtocol.getState():::EXIT733

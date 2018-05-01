@@ -1,0 +1,17 @@
+Synoptic = S0,
+
+S0 = (StringTokenizer(java.lang.String, java.lang.String, boolean):::EXIT187 -> S1),
+
+S1 = (hasMoreTokens():::EXIT308;condition="return == true" -> S2
+		| StringTokenizer(java.lang.String, java.lang.String, boolean):::EXIT187 -> S1),
+
+S2 = (nextToken():::EXIT336 -> S3
+		| hasMoreTokens():::EXIT308;condition="return == true" -> S2),
+
+S3 = (hasMoreTokens():::EXIT308;condition="return == true" -> S2
+		| hasMoreTokens():::EXIT308;condition="not(return == true)" -> S4),
+
+S4 = (hasMoreTokens():::EXIT308;condition="not(return == true)" -> S4
+		| StringTokenizer(java.lang.String, java.lang.String, boolean):::EXIT187 -> S1).
+
+||MTS_Synoptic = (Synoptic).
