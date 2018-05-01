@@ -1,4 +1,4 @@
--r (?<ip>.+), (?<TYPE>.+), .+
+-r (?<ip>) /// org.columba.ristretto.smtp.SMTPProtocol.(?<TYPE>.+)
 -m \\k<ip>
 -o ./tmp/json
 -j

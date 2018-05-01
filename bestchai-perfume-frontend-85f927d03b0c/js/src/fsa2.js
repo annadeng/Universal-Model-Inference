@@ -219,6 +219,8 @@ function renderGraph(g) {
     });
     svg.call(zoom);
     var render = new dagreD3.render();
+    console.log(g);
+    console.log(inner);
     render(inner, g);
 
     zoom.translate([75, 75])
@@ -245,6 +247,40 @@ function highlightModel(clicked, clickedLabel) {
     // save last ones for next iteration
     lastClicked = clicked;
     lastClickedLabel = clickedLabel;
+}
+function searchType(states,id){
+    for (var i = 0; i < states.length; i++) {
+        if(states[i]['id'] = id){
+            return states[i]['label'];
+        }
+    }
+}
+
+function drawDotModel(data){
+    //console.log(data);
+    states = data.nodes;
+    links = data.links;
+    var g = new dagreD3.graphlib.Graph({multigraph:true}).setGraph({});
+    for (var i = 0; i < states.length; i++) {
+        state = {label: states[i]['label'], shape:"circle"};
+        g.setNode(states[i]['id'], state);
+    }
+    for (i = 0; i < links.length; i++) {
+        var type = searchType(states, links[i]['source']);
+
+        var newLabel = (type == "INITIAL"
+                        ? ""
+                        : searchType(links[i]['source']) + '/' + i);
+        var labelShadow = "text-shadow: 0 0 0.4em #fff, 0 0 0.4em #fff, 0 0 0.4em #fff, 0 0 0.4em #fff, 0 0 0.4em #fff, 0 0 0.4em #fff, 0 0 0.4em #fff, 0 0 0.4em #fff, 0 0 0.4em #fff, 0 0 0.4em #fff";
+       
+        g.setEdge(links[i]['source'], links[i]['target'], {label:newLabel, labelStyle:labelShadow, arrowhead: "vee"});
+
+    }
+
+    
+    renderGraph(g);
+    
+  
 }
 
 function drawModel(data) {

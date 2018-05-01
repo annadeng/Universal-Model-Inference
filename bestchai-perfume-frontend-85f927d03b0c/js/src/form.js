@@ -14,6 +14,9 @@ var djqargs = "-r (?<DTIME>.+): Executing(?<TYPE>)on(?<ip>)\n-m \\\\k<ip>\n";
 var shoppingcartlog ="74.15.155.103 [06/Jan/2011:07:24:13] \"GET HTTP/1.1 /check-out.php\"\n13.15.232.201 [06/Jan/2011:07:24:19] \"GET HTTP/1.1 /check-out.php\"\n13.15.232.201 [06/Jan/2011:07:25:33] \"GET HTTP/1.1 /invalid-coupon.php\"\n74.15.155.103 [06/Jan/2011:07:27:05] \"GET HTTP/1.1 /valid-coupon.php\"\n74.15.155.199 [06/Jan/2011:07:28:43] \"GET HTTP/1.1 /check-out.php\"\n74.15.155.103 [06/Jan/2011:07:28:14] \"GET HTTP/1.1 /reduce-price.php\"\n74.15.155.199 [06/Jan/2011:07:29:02] \"GET HTTP/1.1 /get-credit-card.php\"\n13.15.232.201 [06/Jan/2011:07:30:22] \"GET HTTP/1.1 /reduce-price.php\"\n74.15.155.103 [06/Jan/2011:07:30:55] \"GET HTTP/1.1 /check-out.php\"\n13.15.232.201 [06/Jan/2011:07:31:17] \"GET HTTP/1.1 /check-out.php\"\n13.15.232.201 [06/Jan/2011:07:31:20] \"GET HTTP/1.1 /get-credit-card.php\"\n74.15.155.103 [06/Jan/2011:07:31:44] \"GET HTTP/1.1 /get-credit-card.php\"";
 var shoppingcartargs = "-r (?<ip>) .*(?<TIME>0).* \"GET HTTP/1.1 /(?<TYPE>.+).php\"\n-m \\\\k<ip>";
 
+var smtpprotocol = "SMTPProtocol772111086 /// org.columba.ristretto.smtp.SMTPProtocol.SMTPProtocol(java.lang.String, int):::EXIT134\nSMTPProtocol1377614405 /// org.columba.ristretto.smtp.SMTPProtocol.SMTPProtocol(java.lang.String, int):::EXIT134\nSMTPProtocol164230583 /// org.columba.ristretto.smtp.SMTPProtocol.SMTPProtocol(java.lang.String, int):::EXIT134\nSMTPProtocol164230583 /// org.columba.ristretto.smtp.SMTPProtocol.getState():::EXIT733\nSMTPProtocol1008646240 /// org.columba.ristretto.smtp.SMTPProtocol.SMTPProtocol(java.lang.String, int):::EXIT134\nSMTPProtocol1008646240 /// org.columba.ristretto.smtp.SMTPProtocol.getState():::EXIT733\nSMTPProtocol1557520988 /// org.columba.ristretto.smtp.SMTPProtocol.SMTPProtocol(java.lang.String, int):::EXIT134\nSMTPProtocol1557520988 /// org.columba.ristretto.smtp.SMTPProtocol.getState():::EXIT733\nSMTPProtocol135868227 /// org.columba.ristretto.smtp.SMTPProtocol.SMTPProtocol(java.lang.String, int):::EXIT134\nSMTPProtocol135868227 /// org.columba.ristretto.smtp.SMTPProtocol.getState():::EXIT733\nSMTPProtocol135868227 /// org.columba.ristretto.smtp.SMTPProtocol.openPort():::EXIT177\nSMTPProtocol135868227 /// org.columba.ristretto.smtp.SMTPProtocol.ehlo(java.net.InetAddress):::EXIT298\nSMTPProtocol135868227 /// org.columba.ristretto.smtp.SMTPProtocol.startTLS():::EXIT232\nSMTPProtocol135868227 /// org.columba.ristretto.smtp.SMTPProtocol.getState():::EXIT733\nSMTPProtocol2046182713 /// org.columba.ristretto.smtp.SMTPProtocol.SMTPProtocol(java.lang.String, int):::EXIT134\nSMTPProtocol2046182713 /// org.columba.ristretto.smtp.SMTPProtocol.getState():::EXIT733\nSMTPProtocol2046182713 /// org.columba.ristretto.smtp.SMTPProtocol.openPort():::EXIT186\nSMTPProtocol634779961 /// org.columba.ristretto.smtp.SMTPProtocol.SMTPProtocol(java.lang.String, int):::EXIT134\nSMTPProtocol634779961 /// org.columba.ristretto.smtp.SMTPProtocol.getState():::EXIT733\nSMTPProtocol634779961 /// org.columba.ristretto.smtp.SMTPProtocol.openPort():::EXIT177\nSMTPProtocol634779961 /// org.columba.ristretto.smtp.SMTPProtocol.ehlo(java.net.InetAddress):::EXIT298\nSMTPProtocol634779961 /// org.columba.ristretto.smtp.SMTPProtocol.mail(org.columba.ristretto.message.Address):::EXIT415\nSMTPProtocol634779961 /// org.columba.ristretto.smtp.SMTPProtocol.rcpt(org.columba.ristretto.message.Address):::EXIT445\nSMTPProtocol634779961 /// org.columba.ristretto.smtp.SMTPProtocol.data(java.io.InputStream):::EXIT535\nSMTPProtocol634779961 /// org.columba.ristretto.smtp.SMTPProtocol.quit():::EXIT559\nSMTPProtocol1009633633 /// org.columba.ristretto.smtp.SMTPProtocol.SMTPProtocol(java.lang.String, int):::EXIT134\nSMTPProtocol1009633633 /// org.columba.ristretto.smtp.SMTPProtocol.getState():::EXIT733\nSMTPProtocol1009633633 /// org.columba.ristretto.smtp.SMTPProtocol.openPort():::EXIT186\nSMTPProtocol2118116222 /// org.columba.ristretto.smtp.SMTPProtocol.SMTPProtocol(java.lang.String, int):::EXIT134\nSMTPProtocol2118116222 /// org.columba.ristretto.smtp.SMTPProtocol.getState():::EXIT733\nSMTPProtocol2118116222 /// org.columba.ristretto.smtp.SMTPProtocol.openPort():::EXIT177\nSMTPProtocol2118116222 /// org.columba.ristretto.smtp.SMTPProtocol.ehlo(java.net.InetAddress):::EXIT298\nSMTPProtocol2118116222 /// org.columba.ristretto.smtp.SMTPProtocol.mail(org.columba.ristretto.message.Address):::EXIT415\nSMTPProtocol2118116222 /// org.columba.ristretto.smtp.SMTPProtocol.rcpt(org.columba.ristretto.message.Address):::EXIT445\nSMTPProtocol2118116222 /// org.columba.ristretto.smtp.SMTPProtocol.data(java.io.InputStream):::EXIT535\nSMTPProtocol2118116222 /// org.columba.ristretto.smtp.SMTPProtocol.quit():::EXIT559\nSMTPProtocol148260869 /// org.columba.ristretto.smtp.SMTPProtocol.SMTPProtocol(java.lang.String, int):::EXIT134\nSMTPProtocol148260869 /// org.columba.ristretto.smtp.SMTPProtocol.getState():::EXIT733\nSMTPProtocol148260869 /// org.columba.ristretto.smtp.SMTPProtocol.openPort():::EXIT177\nSMTPProtocol148260869 /// org.columba.ristretto.smtp.SMTPProtocol.ehlo(java.net.InetAddress):::EXIT298\nSMTPProtocol148260869 /// org.columba.ristretto.smtp.SMTPProtocol.mail(org.columba.ristretto.message.Address):::EXIT415\nSMTPProtocol148260869 /// org.columba.ristretto.smtp.SMTPProtocol.rcpt(org.columba.ristretto.message.Address):::EXIT445\nSMTPProtocol148260869 /// org.columba.ristretto.smtp.SMTPProtocol.data(java.io.InputStream):::EXIT535\nSMTPProtocol148260869 /// org.columba.ristretto.smtp.SMTPProtocol.quit():::EXIT559\nSMTPProtocol467165034 /// org.columba.ristretto.smtp.SMTPProtocol.SMTPProtocol(java.lang.String, int):::EXIT134\nSMTPProtocol467165034 /// org.columba.ristretto.smtp.SMTPProtocol.getState():::EXIT733\nSMTPProtocol467165034 /// org.columba.ristretto.smtp.SMTPProtocol.openPort():::EXIT186\nSMTPProtocol749595579 /// org.columba.ristretto.smtp.SMTPProtocol.SMTPProtocol(java.lang.String, int):::EXIT134\nSMTPProtocol749595579 /// org.columba.ristretto.smtp.SMTPProtocol.getState():::EXIT733\nSMTPProtocol749595579 /// org.columba.ristretto.smtp.SMTPProtocol.openPort():::EXIT177\nSMTPProtocol749595579 /// org.columba.ristretto.smtp.SMTPProtocol.ehlo(java.net.InetAddress):::EXIT298\nSMTPProtocol749595579 /// org.columba.ristretto.smtp.SMTPProtocol.getState():::EXIT733";
+var smptargs = "-r (?<ip>) /// org.columba.ristretto.smtp.SMTPProtocol.(?<TYPE>.+)\n-m \\\\k<ip>";
+
 //synoptic log and args
 // var s_browserlog = "164.163.76.74, cache-page, 0\n164.163.76.74, retrieve-page, 9\n164.163.76.74, cache-image, 18\n164.163.76.74, retrieve-image, 39\n164.163.76.74, quit, 160 \n237.250.28.190, cache-page, 0\n237.250.28.190, retrieve-page, 17\n237.250.28.190, cache-image, 34\n237.250.28.190, retrieve-image, 104 \n237.250.28.190, quit, 274 \n130.78.242.94, cache-page, 0\n130.78.242.94, retrieve-page, 9\n130.78.242.94, cache-image, 118 \n130.78.242.94, retrieve-image, 140 \n130.78.242.94, quit, 162 \n177.176.181.25, cache-page, 0\n177.176.181.25, retrieve-page, 17\n177.176.181.25, cache-image, 136 \n177.176.181.25, retrieve-image, 204 \n177.176.181.25, quit, 272 \n195.88.181.89, cache-image, 0\n195.88.181.89, retrieve-image, 27\n195.88.181.89, quit, 54\n153.98.187.29, cache-image, 0\n153.98.187.29, retrieve-image, 62\n153.98.187.29, quit, 124";
 var s_browserargs = "-r (?<ip>.+), (?<TYPE>.+), .+\n-m \\\\k<ip>";
@@ -30,12 +33,21 @@ var s_djqargs = "-r .+: Executing(?<TYPE>)on(?<ip>)\n-m \\\\k<ip>\n";
 // var s_shoppingcartlog ="74.15.155.103 [06/Jan/2011:07:24:13] \"GET HTTP/1.1 /check-out.php\"\n13.15.232.201 [06/Jan/2011:07:24:19] \"GET HTTP/1.1 /check-out.php\"\n13.15.232.201 [06/Jan/2011:07:25:33] \"GET HTTP/1.1 /invalid-coupon.php\"\n74.15.155.103 [06/Jan/2011:07:27:05] \"GET HTTP/1.1 /valid-coupon.php\"\n74.15.155.199 [06/Jan/2011:07:28:43] \"GET HTTP/1.1 /check-out.php\"\n74.15.155.103 [06/Jan/2011:07:28:14] \"GET HTTP/1.1 /reduce-price.php\"\n74.15.155.199 [06/Jan/2011:07:29:02] \"GET HTTP/1.1 /get-credit-card.php\"\n13.15.232.201 [06/Jan/2011:07:30:22] \"GET HTTP/1.1 /reduce-price.php\"\n74.15.155.103 [06/Jan/2011:07:30:55] \"GET HTTP/1.1 /check-out.php\"\n13.15.232.201 [06/Jan/2011:07:31:17] \"GET HTTP/1.1 /check-out.php\"\n13.15.232.201 [06/Jan/2011:07:31:20] \"GET HTTP/1.1 /get-credit-card.php\"\n74.15.155.103 [06/Jan/2011:07:31:44] \"GET HTTP/1.1 /get-credit-card.php\"";
 var s_shoppingcartargs = "-r (?<ip>) .+ \"GET HTTP/1.1 /(?<TYPE>.+).php\"\n-m \\\\k<ip>";
 
+var signaturelog = "Signature337152244 /// java.security.Signature.Signature(java.lang.String):::EXIT137\nSignature337152244 /// java.security.Signature.initVerify(java.security.PublicKey):::EXIT422\nSignature337152244 /// java.security.Signature.update(byte[]):::EXIT668";
+var signatureargs = "-r (?<ip>) /// (?<TYPE>.+)\n-m \\\\k<ip>";
+
 
 var logstring;
 var argstring;
 
 var modelname;
 var alg;
+
+function writeSignatureModel(modelname) {
+    this.modelname = modelname
+    logstring = signaturelog; 
+    $("#logtext").val(logstring);
+}
 
 function writeBrowserModel(modelname) {
     this.modelname = modelname
@@ -67,6 +79,12 @@ function writeShoppingCartModel(modelname) {
     $("#logtext").val(logstring);
 }
 
+function writeSMTPProtocol(modelname){
+	logstring = smtpprotocol;
+	this.modelname = modelname
+	$("#logtext").val(logstring);
+}
+
 
 function writePerfumeArg(alg){
 	this.alg = alg;
@@ -86,33 +104,40 @@ function writePerfumeArg(alg){
         case "shopping":
             argstring = shoppingcartargs;
             break;
+        case "signature":
+        	argstring = signatureargs;
+        	break;
+        case "smtp":
+        	argstring = smptargs;
+        	break;
     }
     $("#argsfield").val(argstring);
 
 }
 
-function writeArg(alg){
-	this.alg = alg;
-    switch(modelname){
-        case "browser":
-            argstring = browserargs + '\n' + s_browserargs;
-            break;
-        case "connection":
-            argstring = connectionargs + '\n' + s_connectionargs;
-            break;
-        case "radius":
-            argstring = radiusargs + '\n' + s_radiusargs;
-            break;
-        case "djq":
-            argstring = djqargs + '\n' + s_djqargs;
-            break;
-        case "shopping":
-            argstring = shoppingcartargs + '\n' + s_shoppingcartargs;
-            break;
-    }
-    $("#argsfield").val(argstring);
+// function writeArg(alg){
+// 	this.alg = alg;
+//     switch(modelname){
+//         case "browser":
+//             argstring = browserargs + '\n' + s_browserargs;
+//             break;
+//         case "connection":
+//             argstring = connectionargs + '\n' + s_connectionargs;
+//             break;
+//         case "radius":
+//             argstring = radiusargs + '\n' + s_radiusargs;
+//             break;
+//         case "djq":
+//             argstring = djqargs + '\n' + s_djqargs;
+//             break;
+//         case "shopping":
+//             argstring = shoppingcartargs + '\n' + s_shoppingcartargs;
+//             break;
 
-}
+//     }
+//     $("#argsfield").val(argstring);
+
+// }
 
 function writeSynopticArg(alg){
 	this.alg = alg;
@@ -132,6 +157,37 @@ function writeSynopticArg(alg){
         case "shopping":
             argstring = s_shoppingcartargs;
             break;
+        case "signature":
+        	argstring = signatureargs;
+        	break;
+       	case "smtp":
+        	argstring = smptargs;
+        	break;
+    }
+    $("#argsfield").val(argstring);
+}
+
+function writeKTailArg(alg){
+	this.alg = alg;
+    switch(modelname){
+        case "browser":
+            argstring = s_browserargs;
+            break;
+        case "connection":
+            argstring = s_connectionargs;
+            break;
+        case "radius":
+            argstring = s_radiusargs;
+            break;
+        case "djq":
+            argstring = s_djqargs;
+            break;
+        case "shopping":
+            argstring = s_shoppingcartargs;
+            break;
+        case "smtp":
+        	argstring = smptargs;
+        	break;
     }
     $("#argsfield").val(argstring);
 }

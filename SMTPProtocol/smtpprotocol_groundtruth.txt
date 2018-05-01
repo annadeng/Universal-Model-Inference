@@ -1,0 +1,20 @@
+SMTPProtocol = S0,
+
+S0 = (sMTPProtocol_EXIT134 -> S1),
+
+S1 = (openPort_EXIT177 -> S2
+		| openPort_EXIT186 -> S1
+		| rcpt_EXIT445 -> S1
+		| quit_EXIT559 -> S1
+		| getState_EXIT733 -> S1),
+		
+S2 = (openPort_EXIT177 -> S2
+		| ehlo_EXIT298 -> S2
+		| mail_EXIT415 -> S2
+		| rcpt_EXIT445 -> S2
+		| data_EXIT535 -> S2
+		| startTLS_EXIT232 -> S2
+		| quit_EXIT559 -> S1
+		| getState_EXIT733 -> S2).
+
+||MTS_SMTPProtocol = (SMTPProtocol).
