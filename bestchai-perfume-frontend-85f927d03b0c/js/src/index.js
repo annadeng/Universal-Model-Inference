@@ -104,7 +104,9 @@ function revealModel() {
 
 function revealkTailModel(){
     $("#parsing-dialog").dialog("close");
-    //clearModel(); 
+    clearModel(); 
+    clearModelLegend();
+    initialize();
     drawDotModel(data);
     handleExpand(-1);
 

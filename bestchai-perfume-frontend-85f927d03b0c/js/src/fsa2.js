@@ -219,6 +219,8 @@ function renderGraph(g) {
     });
     svg.call(zoom);
     var render = new dagreD3.render();
+    console.log(g);
+    console.log(inner);
     render(inner, g);
 
     zoom.translate([75, 75])
